@@ -5,29 +5,29 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-        <title>Doris Cole - Odoo</title>
-        <link type="image/x-icon" rel="shortcut icon" href="https://demo3.odoo.com/web/static/src/img/favicon.ico">
+        <title>Test Employee - My App</title>
+        <link type="image/x-icon" rel="shortcut icon" href="https://demo3.myapp.com/web/static/src/img/favicon.ico">
 
         <script type="text/javascript">
-            var odoo = {
+            var myapp = {
             csrf_token: "2067984cbb59c090129d93343d8e2640ee21f418o",
             };
         </script>
 
 
         <meta name="theme-color" content="#875A7B">
-        <link rel="icon" sizes="192x192" href="https://demo3.odoo.com/web_enterprise/static/src/img/mobile-icons/android-192x192.png">
+        <link rel="icon" sizes="192x192" href="https://demo3.myapp.com/web_enterprise/static/src/img/mobile-icons/android-192x192.png">
 
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="apple-touch-icon" href="https://demo3.odoo.com/web_enterprise/static/src/img/mobile-icons/apple-152x152.png">
+        <link rel="apple-touch-icon" href="https://demo3.myapp.com/web_enterprise/static/src/img/mobile-icons/apple-152x152.png">
 
         <meta name="msapplication-navbutton-color" content="#875A7B">
         <meta name="msapplication-TileColor" content="#875A7B">
         <meta name="msapplication-TileImage" content="/web_enterprise/static/src/img/mobile-icons/windows-144x144.png">
 
         <script type="text/javascript">
-            odoo.session_info = {"session_id": "6ffadd3580be131e3d9da8a66e9351da2d15784e", "user_context": {"tz": "Europe/Brussels", "uid": 2, "lang": "en_US"}, "warning": "admin", "max_time_between_keys_in_ms": 55, "uid": 2, "server_version": "12.0+e", "web.base.url": "https://demo3.odoo.com", "ocn_token_key": false, "fcm_project_id": false, "expiration_date": false, "timesheet_uom_factor": 1.0, "db": "demo_120_1562653884", "user_companies": false, "web_tours": ["project_tour"], "multi_lang": false, "name": "Mitchell Admin", "expiration_reason": false, "currencies": {"1": {"digits": [69, 2], "position": "after", "symbol": "\u20ac"}, "2": {"digits": [69, 2], "position": "before", "symbol": "$"}}, "odoobot_initialized": true, "is_system": true, "timesheet_uom": {"name": "Hour(s)", "timesheet_widget": "float_time", "rounding": 0.01, "id": 6}, "username": "admin", "company_id": 1, "is_admin": true, "dbuuid": "6c0e8ba4-a213-11e9-a735-f8bc125520c4", "partner_display_name": "YourCompany, Mitchell Admin", "server_version_info": [12, 0, 0, "final", 0, "e"], "partner_id": 3, "company_currency_id": 2, "inbox_action": 109, "show_effect": "True"};
+            myapp.session_info = {"session_id": "6ffadd3580be131e3d9da8a66e9351da2d15784e", "user_context": {"tz": "Europe/Brussels", "uid": 2, "lang": "en_US"}, "warning": "admin", "max_time_between_keys_in_ms": 55, "uid": 2, "server_version": "12.0+e", "web.base.url": "https://demo3.myapp.com", "ocn_token_key": false, "fcm_project_id": false, "expiration_date": false, "timesheet_uom_factor": 1.0, "db": "demo_120_1562653884", "user_companies": false, "web_tours": ["project_tour"], "multi_lang": false, "name": "Mitchell Admin", "expiration_reason": false, "currencies": {"1": {"digits": [69, 2], "position": "after", "symbol": "\u20ac"}, "2": {"digits": [69, 2], "position": "before", "symbol": "$"}}, "myappbot_initialized": true, "is_system": true, "timesheet_uom": {"name": "Hour(s)", "timesheet_widget": "float_time", "rounding": 0.01, "id": 6}, "username": "admin", "company_id": 1, "is_admin": true, "dbuuid": "6c0e8ba4-a213-11e9-a735-f8bc125520c4", "partner_display_name": "YourCompany, Mitchell Admin", "server_version_info": [12, 0, 0, "final", 0, "e"], "partner_id": 3, "company_currency_id": 2, "inbox_action": 109, "show_effect": "True"};
         </script>
 
         <link type="text/css" rel="stylesheet" href="resources/css/web_002.css">
@@ -53,7 +53,7 @@
 
 
         <script type="text/javascript">
-            odoo.define('web.web_client', function (require) {
+            myapp.define('web.web_client', function (require) {
             var WebClient = require('web.WebClient');
             var web_client = new WebClient();
             $(function() {
@@ -310,7 +310,7 @@
                         </div>
                     </li><li class="o_web_studio_navbar_item  d-none d-md-inline-block">
                         <a href="#" title="Toggle Studio">
-                            <img alt="Odoo Studio Icon" aria-label="Toggle Studio" src="resources/studio_icon_small.png" title="Toggle Studio" width="12px" height="12px">
+                            <img alt="My App Studio Icon" aria-label="Toggle Studio" src="resources/studio_icon_small.png" title="Toggle Studio" width="12px" height="12px">
                         </a>
                     </li><li class="o_user_menu">
                         <a aria-expanded="false" class="dropdown-toggle" data-display="static" data-toggle="dropdown" href="#" role="button">
@@ -325,7 +325,7 @@
                             <a class="dropdown-item d-none d-md-inline-block" data-menu="shortcuts" href="#" role="menuitem">Shortcuts</a>
                             <div class="dropdown-divider" role="separator"></div>
                             <a class="dropdown-item" data-menu="settings" href="#" role="menuitem">Preferences</a>
-                            <a class="dropdown-item" data-menu="account" href="#" role="menuitem">My Odoo.com account</a>
+                            <a class="dropdown-item" data-menu="account" href="#" role="menuitem">My My App.com account</a>
                             <a class="dropdown-item" data-menu="logout" href="#" role="menuitem">Log out</a>
                             <a class="dropdown-item d-none" data-menu="shortcut" href="#">Add to Home Screen</a>
                             <a class="dropdown-item d-none" data-menu="switch" href="#"> Switch/Add Account</a>
@@ -350,7 +350,7 @@
         <div class="o_loading" style="display: none;">Loading</div><div class="o_main">
             <main class="o_main_content"></main>
         </div><div state="voice" class="placeholder-icon" id="tts-placeholder-icon" title="Click to show TTS button" style="background-image: url(&quot;moz-extension://a09feeac-1cea-4509-b5fe-92266ee95c5a/data/content_script/icons/voice.png&quot;); display: none;"><canvas width="36" height="36" class="loading-circle" id="text-to-speech-loader" style="display: none;"></canvas></div><div class="o_control_panel o_breadcrumb_full">
-            <ol class="breadcrumb" role="navigation"><li class="breadcrumb-item o_back_button"><a href="#">Employees</a></li><li class="breadcrumb-item active">Doris Cole</li></ol>
+            <ol class="breadcrumb" role="navigation"><li class="breadcrumb-item o_back_button"><a href="#">Employees</a></li><li class="breadcrumb-item active">Test Employee</li></ol>
             <div class="o_cp_searchview" role="search" style="display: none;"><div aria-autocomplete="list" class="o_searchview o_hidden" role="search">
                     <span aria-label="Advanced Search..." class="o_searchview_more fa fa-search-minus" role="img" title="Advanced Search..."></span>
                     <div class="o_searchview_input_container"><div class="dropdown-menu o_searchview_autocomplete" role="menu" style="display: none;"></div><input accesskey="Q" aria-haspopup="true" class="o_searchview_input" placeholder="Search..." role="searchbox" type="text"></div>
@@ -919,7 +919,7 @@
 
                                         </div>
 
-                                    </div><div class="oe_title"><label class="o_form_label oe_edit_only" for="o_field_input_774">Name</label><h1><input class="o_field_char o_field_widget o_input o_required_modifier" name="name" placeholder="Employee's Name" type="text" id="o_field_input_774" value="Doris Cole"></h1></div><div class="o_field_many2manytags o_input o_field_widget" name="category_ids">
+                                    </div><div class="oe_title"><label class="o_form_label oe_edit_only" for="o_field_input_774">Name</label><h1><input class="o_field_char o_field_widget o_input o_required_modifier" name="name" placeholder="Employee's Name" type="text" id="o_field_input_774" value="Test Employee"></h1></div><div class="o_field_many2manytags o_input o_field_widget" name="category_ids">
 
                                         <div aria-atomic="true" class="o_field_widget o_field_many2one" name="category_ids">
                                             <div class="o_input_dropdown">
