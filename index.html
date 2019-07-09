@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html><head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <title>Doris Cole - Odoo</title>
+        <link type="image/x-icon" rel="shortcut icon" href="https://demo3.odoo.com/web/static/src/img/favicon.ico">
+
+        <script type="text/javascript">
+            var odoo = {
+            csrf_token: "2067984cbb59c090129d93343d8e2640ee21f418o",
+            };
+        </script>
+
+
+        <meta name="theme-color" content="#875A7B">
+        <link rel="icon" sizes="192x192" href="https://demo3.odoo.com/web_enterprise/static/src/img/mobile-icons/android-192x192.png">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon" href="https://demo3.odoo.com/web_enterprise/static/src/img/mobile-icons/apple-152x152.png">
+
+        <meta name="msapplication-navbutton-color" content="#875A7B">
+        <meta name="msapplication-TileColor" content="#875A7B">
+        <meta name="msapplication-TileImage" content="/web_enterprise/static/src/img/mobile-icons/windows-144x144.png">
+
+        <script type="text/javascript">
+            odoo.session_info = {"session_id": "6ffadd3580be131e3d9da8a66e9351da2d15784e", "user_context": {"tz": "Europe/Brussels", "uid": 2, "lang": "en_US"}, "warning": "admin", "max_time_between_keys_in_ms": 55, "uid": 2, "server_version": "12.0+e", "web.base.url": "https://demo3.odoo.com", "ocn_token_key": false, "fcm_project_id": false, "expiration_date": false, "timesheet_uom_factor": 1.0, "db": "demo_120_1562653884", "user_companies": false, "web_tours": ["project_tour"], "multi_lang": false, "name": "Mitchell Admin", "expiration_reason": false, "currencies": {"1": {"digits": [69, 2], "position": "after", "symbol": "\u20ac"}, "2": {"digits": [69, 2], "position": "before", "symbol": "$"}}, "odoobot_initialized": true, "is_system": true, "timesheet_uom": {"name": "Hour(s)", "timesheet_widget": "float_time", "rounding": 0.01, "id": 6}, "username": "admin", "company_id": 1, "is_admin": true, "dbuuid": "6c0e8ba4-a213-11e9-a735-f8bc125520c4", "partner_display_name": "YourCompany, Mitchell Admin", "server_version_info": [12, 0, 0, "final", 0, "e"], "partner_id": 3, "company_currency_id": 2, "inbox_action": 109, "show_effect": "True"};
+        </script>
+
+        <link type="text/css" rel="stylesheet" href="resources/css/web_002.css">
+        <link type="text/css" rel="stylesheet" href="resources/css/web.css">
+        <link type="text/css" rel="stylesheet" href="resources/css/web_003.css">
+        <link type="text/css" rel="stylesheet" href="resources/css/web_studio.css">
+
+        <link type="text/css" rel="stylesheet" href="resources/css/web_editor.css">
+        <link type="text/css" rel="stylesheet" href="resources/css/web_editor_002.css">
+
+        <script type="text/javascript" src="resources/js/web.js"></script>
+        <script type="text/javascript" src="resources/js/web_002.js"></script>
+        <script type="text/javascript" src="resources/js/web_studio.js"></script>
+
+        <script type="text/javascript" src="resources/js/web_editor_002.js"></script>
+        <script type="text/javascript" src="resources/js/web_editor.js"></script>
+
+
+
+        <!--[if lt IE 10]>
+            <body class="ie9">
+        <![endif]-->
+
+
+        <script type="text/javascript">
+            odoo.define('web.web_client', function (require) {
+            var WebClient = require('web.WebClient');
+            var web_client = new WebClient();
+            $(function() {
+            web_client.setElement($(document.body));
+            web_client.start();
+            });
+            return web_client;
+            });
+        </script>
+
+        <script type="text/javascript" src="resources/en_US"></script></head>
+    <body class="o_web_client"><header>
+            <nav class="o_main_navbar">
+                <a aria-label="Applications" class="fa o_menu_toggle fa-th" href="#" title="Applications" accesskey="h"></a>
+                <button aria-label="Toggle menu" class="fa fa-bars float-right d-block d-md-none o_mobile_menu_toggle" title="Toggle menu" type="button"></button>
+
+                <a class="o_menu_brand" href="#" role="button">Employees</a>
+                <ul class="o_menu_sections" role="menu"><li>
+
+                        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" role="menuitem" data-action-id="184" data-action-model="ir.actions.act_window" data-menu="149" data-menu-xmlid="hr.menu_open_view_employee_list_my" class="o_menu_entry_lvl_1" href="#menu_id=149&amp;action=184">
+                            <span>Employees</span>
+                        </a>
+
+                    </li><li>
+
+                        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" role="menuitem" data-action-id="268" data-action-model="ir.actions.act_window" data-menu="192" data-menu-xmlid="hr_contract.hr_menu_contract" class="o_menu_entry_lvl_1" href="#menu_id=192&amp;action=268">
+                            <span>Contracts</span>
+                        </a>
+
+                    </li><li>
+                        <a aria-expanded="false" class="dropdown-toggle o-no-caret o_menu_header_lvl_1" data-toggle="dropdown" href="#" role="button" data-menu-xmlid="hr_gamification.menu_hr_gamification">
+                            Challenges
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+
+
+
+
+
+
+
+
+                            <a data-target="#o_navbar_collapse.in" data-toggle="collapse" role="menuitem" data-action-id="175" data-action-model="ir.actions.act_window" data-menu="194" data-menu-xmlid="hr_gamification.gamification_badge_menu_hr" class="dropdown-item o_menu_entry_lvl_2" href="#menu_id=194&amp;action=175">
+                                <span>Badges</span>
+                            </a>
+
+
+
+
+
+
+
+
+
+
+
+
+                            <a data-target="#o_navbar_collapse.in" data-toggle="collapse" role="menuitem" data-action-id="272" data-action-model="ir.actions.act_window" data-menu="195" data-menu-xmlid="hr_gamification.gamification_challenge_menu_hr" class="dropdown-item o_menu_entry_lvl_2" href="#menu_id=195&amp;action=272">
+                                <span>Challenges</span>
+                            </a>
+
+
+
+
+
+
+
+
+
+
+
+
+                            <a data-target="#o_navbar_collapse.in" data-toggle="collapse" role="menuitem" data-action-id="271" data-action-model="ir.actions.act_window" data-menu="196" data-menu-xmlid="hr_gamification.gamification_goal_menu_hr" class="dropdown-item o_menu_entry_lvl_2" href="#menu_id=196&amp;action=271">
+                                <span>Goals History</span>
+                            </a>
+
+
+
+
+
+                        </div>
+                    </li><li>
+
+                        <a data-target="#o_navbar_collapse.in" data-toggle="collapse" role="menuitem" data-action-id="189" data-action-model="ir.actions.act_window" data-menu="151" data-menu-xmlid="hr.menu_hr_department_tree" class="o_menu_entry_lvl_1" href="#menu_id=151&amp;action=189">
+                            <span>Departments</span>
+                        </a>
+
+                    </li><li>
+                        <a aria-expanded="false" class="dropdown-toggle o-no-caret o_menu_header_lvl_1" data-toggle="dropdown" href="#" role="button" data-menu-xmlid="hr.menu_human_resources_configuration">
+                            Configuration
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+
+
+
+
+
+
+
+
+                            <a data-target="#o_navbar_collapse.in" data-toggle="collapse" role="menuitem" data-action-id="190" data-action-model="ir.actions.act_window" data-menu="152" data-menu-xmlid="hr.hr_menu_configuration" class="dropdown-item o_menu_entry_lvl_2" href="#menu_id=152&amp;action=190">
+                                <span>Settings</span>
+                            </a>
+
+
+
+
+
+
+
+
+
+
+
+
+                            <a data-target="#o_navbar_collapse.in" data-toggle="collapse" role="menuitem" data-action-id="885" data-action-model="ir.actions.act_window" data-menu="609" data-menu-xmlid="hr_contract_salary.hr_menu_contract_templates" class="dropdown-item o_menu_entry_lvl_2" href="#menu_id=609&amp;action=885">
+                                <span>Contract Templates</span>
+                            </a>
+
+
+
+
+
+                        </div>
+                    </li></ul>
+                <ul class="o_menu_systray" role="menu"><li class="o_mail_systray_item">
+                        <a aria-expanded="false" class="dropdown-toggle o-no-caret" data-display="static" data-toggle="dropdown" href="#" role="button" title="Activities">
+                            <i aria-label="Activities" class="fa fa-clock-o" role="img"></i> <span class="o_notification_counter badge badge-pill">9</span>
+                        </a>
+                        <div class="o_mail_systray_dropdown dropdown-menu dropdown-menu-right" role="menu">
+                            <div class="o_mail_systray_dropdown_items">
+
+
+                                <div class="o_mail_preview" data-filter="my" data-model_name="Applicant" data-res_model="hr.applicant">
+                                    <div class="o_mail_preview_image o_mail_preview_app">
+                                        <img alt="Activity" src="resources/icon_002.png">
+                                    </div>
+                                    <div class="o_preview_info">
+                                        <div class="o_preview_title">
+                                            <span class="o_preview_name">
+                                                Applicant
+                                            </span>
+
+                                        </div>
+
+
+                                        <div>
+
+                                            <span class="o_no_activity mr16">0 Late </span>
+
+                                            <span class="o_no_activity mr16">0 Today </span>
+                                            <button class="btn btn-link o_activity_filter_button float-right" data-filter="upcoming_all" data-model_name="Applicant" data-res_model="hr.applicant" type="button"> 3 Future </button>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="o_mail_preview" data-filter="my" data-model_name="Lead/Opportunity" data-res_model="crm.lead">
+                                    <div class="o_mail_preview_image o_mail_preview_app">
+                                        <img alt="Activity" src="resources/icon_003.png">
+                                    </div>
+                                    <div class="o_preview_info">
+                                        <div class="o_preview_title">
+                                            <span class="o_preview_name">
+                                                Lead/Opportunity
+                                            </span>
+
+                                        </div>
+
+
+                                        <div>
+                                            <button class="btn btn-link o_activity_filter_button mr16" data-filter="overdue" data-model_name="Lead/Opportunity" data-res_model="crm.lead" type="button">9 Late </button>
+
+
+                                            <span class="o_no_activity mr16">0 Today </span>
+
+                                            <span class="o_no_activity float-right">0 Future</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="o_mail_preview" data-filter="my" data-model_name="Notes" data-res_model="note.note">
+                                    <div class="o_mail_preview_image o_mail_preview_app">
+                                        <img alt="Activity" src="resources/icon.png">
+                                    </div>
+                                    <div class="o_preview_info">
+                                        <div class="o_preview_title">
+                                            <span class="o_preview_name">
+                                                Notes
+                                            </span>
+
+                                        </div>
+
+
+                                        <div>
+
+                                            <span class="o_no_activity mr16">0 Late </span>
+
+                                            <span class="o_no_activity mr16">0 Today </span>
+
+                                            <span class="o_no_activity float-right">0 Future</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="o_sys_documents_request">
+                                    <a class="btn btn-block text-center" role="button">Request a Document</a>
+                                </div>
+
+                                <div class="o_note_show">
+                                    <a class="btn btn-block text-center" role="button">Add new note</a>
+                                </div>
+                                <div class="o_note o_mail_preview d-none">
+                                    <div class="o_mail_preview_image o_mail_preview_app">
+                                        <img alt="Channel" src="resources/icon.png">
+                                    </div>
+                                    <div class="o_preview_info">
+                                        <div class="o_preview_title">
+                                            <span class="o_preview_name"><strong>Add a note</strong></span>
+                                            <div class="o_note_datetime"></div>
+                                            <span class="ml4">
+                                                <a class="o_note_set_datetime">
+                                                    <span aria-label="Set date and time" class="fa fa-calendar" role="img" title="Set date and time"></span>
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="o_note_input_box">
+                                            <p><input class="o_note_input" placeholder="Remember..." type="text"></p>
+                                            <span class="ml8 mr4">
+                                                <a class="o_note_save">SAVE</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li><li class="o_mail_systray_item">
+                        <a aria-expanded="false" class="dropdown-toggle o-no-caret" data-display="static" data-toggle="dropdown" href="#" role="button" title="Conversations">
+                            <i aria-label="Messages" class="fa fa-comments" role="img"></i> <span class="o_notification_counter badge badge-pill">2</span>
+                        </a>
+                        <div class="o_mail_systray_dropdown dropdown-menu dropdown-menu-right" role="menu">
+
+                            <div class="o_mail_systray_dropdown_top">
+                                <div>
+                                    <button class="btn btn-link o_filter_button active" role="tab" type="button"> All </button>
+                                    <button class="btn btn-link o_filter_button" data-filter="chat" role="tab" type="button"> Chat </button>
+                                    <button class="btn btn-link o_filter_button" data-filter="channels" role="tab" type="button"> Channels </button>
+                                </div>
+                                <button class="btn btn-link o_new_message" type="button"> New message </button>
+                            </div>
+                            <div class="o_mail_systray_dropdown_items"></div>
+
+                        </div>
+                    </li><li class="o_web_studio_navbar_item  d-none d-md-inline-block">
+                        <a href="#" title="Toggle Studio">
+                            <img alt="Odoo Studio Icon" aria-label="Toggle Studio" src="resources/studio_icon_small.png" title="Toggle Studio" width="12px" height="12px">
+                        </a>
+                    </li><li class="o_user_menu">
+                        <a aria-expanded="false" class="dropdown-toggle" data-display="static" data-toggle="dropdown" href="#" role="button">
+                            <img alt="Avatar" class="rounded-circle oe_topbar_avatar" src="resources/image.jpg">
+
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" role="menu">
+
+                            <a class="dropdown-item" data-menu="documentation" href="#" role="menuitem">Documentation</a>
+                            <a class="dropdown-item" data-menu="support" href="#" role="menuitem">Support</a>
+
+                            <a class="dropdown-item d-none d-md-inline-block" data-menu="shortcuts" href="#" role="menuitem">Shortcuts</a>
+                            <div class="dropdown-divider" role="separator"></div>
+                            <a class="dropdown-item" data-menu="settings" href="#" role="menuitem">Preferences</a>
+                            <a class="dropdown-item" data-menu="account" href="#" role="menuitem">My Odoo.com account</a>
+                            <a class="dropdown-item" data-menu="logout" href="#" role="menuitem">Log out</a>
+                            <a class="dropdown-item d-none" data-menu="shortcut" href="#">Add to Home Screen</a>
+                            <a class="dropdown-item d-none" data-menu="switch" href="#"> Switch/Add Account</a>
+
+
+                        </div>
+                    </li></ul>
+            </nav>
+        </header>
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="o_loading" style="display: none;">Loading</div><div class="o_main">
+            <main class="o_main_content"></main>
+        </div><div state="voice" class="placeholder-icon" id="tts-placeholder-icon" title="Click to show TTS button" style="background-image: url(&quot;moz-extension://a09feeac-1cea-4509-b5fe-92266ee95c5a/data/content_script/icons/voice.png&quot;); display: none;"><canvas width="36" height="36" class="loading-circle" id="text-to-speech-loader" style="display: none;"></canvas></div><div class="o_control_panel o_breadcrumb_full">
+            <ol class="breadcrumb" role="navigation"><li class="breadcrumb-item o_back_button"><a href="#">Employees</a></li><li class="breadcrumb-item active">Doris Cole</li></ol>
+            <div class="o_cp_searchview" role="search" style="display: none;"><div aria-autocomplete="list" class="o_searchview o_hidden" role="search">
+                    <span aria-label="Advanced Search..." class="o_searchview_more fa fa-search-minus" role="img" title="Advanced Search..."></span>
+                    <div class="o_searchview_input_container"><div class="dropdown-menu o_searchview_autocomplete" role="menu" style="display: none;"></div><input accesskey="Q" aria-haspopup="true" class="o_searchview_input" placeholder="Search..." role="searchbox" type="text"></div>
+                </div></div>
+            <div class="o_cp_left">
+                <div aria-label="Control panel toolbar" class="o_cp_buttons" role="toolbar"><div>
+                        <div aria-label="Main actions" class="o_form_buttons_view o_hidden" role="toolbar">
+                            <button accesskey="a" class="btn btn-primary o_form_button_edit" type="button">
+                                Edit
+                            </button>
+                            <button accesskey="c" class="btn btn-secondary o_form_button_create" type="button">
+                                Create
+                            </button>
+                        </div>
+                        <div aria-label="Main actions" class="o_form_buttons_edit" role="toolbar" data-original-title="" title="">
+                            <button accesskey="s" class="btn btn-primary o_form_button_save" type="button">
+                                Save
+                            </button>
+                            <button accesskey="j" class="btn btn-secondary o_form_button_cancel" type="button">
+                                Discard
+                            </button>
+                        </div>
+                    </div></div>
+                <aside class="o_cp_sidebar"><div class="btn-group o_hidden">
+
+                        <div class="btn-group o_dropdown">
+                            <button aria-expanded="false" class="o_dropdown_toggler_btn btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+
+                                Print
+                            </button>
+
+                            <div class="dropdown-menu o_dropdown_menu" role="menu">
+
+
+                                <a role="menuitem" data-index="0" data-section="print" href="#" class="dropdown-item undefined">
+                                    Leaves Summary
+
+                                </a>
+
+
+                            </div>
+                        </div>
+
+                        <div class="btn-group o_dropdown">
+                            <button aria-expanded="false" class="o_dropdown_toggler_btn btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+
+                                Action
+                            </button>
+
+                            <div class="dropdown-menu o_dropdown_menu" role="menu">
+
+
+                                <a role="menuitem" data-index="0" data-section="other" href="#" class="dropdown-item undefined">
+                                    Delete
+
+                                </a>
+
+
+                                <a role="menuitem" data-index="1" data-section="other" href="#" class="dropdown-item undefined">
+                                    Duplicate
+
+                                </a>
+
+
+                                <a role="menuitem" data-index="2" data-section="other" href="#" class="dropdown-item undefined">
+                                    Subordinate Hierarchy
+
+                                </a>
+
+
+                            </div>
+                        </div>
+
+                    </div></aside>
+            </div>
+            <div class="o_cp_right">
+                <div class="btn-group o_search_options" role="search" style="display: block;"><div style="display: none;"><div class="btn-group o_dropdown">
+                            <button aria-expanded="false" data-toggle="dropdown" class="o_dropdown_toggler_btn btn btn-secondary dropdown-toggle" tabindex="-1">
+                                <span class="fa fa-filter"></span> Filters 
+                            </button>
+                            <div class="dropdown-menu o_dropdown_menu o_filters_menu" role="menu">
+
+
+
+
+                                <div class="dropdown-divider" data-removable="1" role="separator"></div>
+                                <div class="o_menu_item" data-id="__filter__549">
+                                    <a href="#" role="menuitem" class="dropdown-item">
+                                        Newly Hired
+
+
+                                    </a>
+
+                                </div>
+
+
+
+                                <div class="o_menu_item" data-id="__filter__550">
+                                    <a href="#" role="menuitem" class="dropdown-item">
+                                        Absent Today
+
+
+                                    </a>
+
+                                </div>
+
+
+                                <div class="dropdown-divider" data-removable="1" role="separator"></div>
+                                <div class="o_menu_item" data-id="__filter__552">
+                                    <a href="#" role="menuitem" class="dropdown-item">
+                                        Archived
+
+
+                                    </a>
+
+                                </div>
+
+
+                                <div class="dropdown-divider" data-removable="1" role="separator"></div>
+                                <div class="o_menu_item" data-id="__filter__554">
+                                    <a href="#" role="menuitem" class="dropdown-item">
+                                        Unread Messages
+
+
+                                    </a>
+
+                                </div>
+
+
+                                <div class="dropdown-divider" data-removable="1" role="separator"></div>
+                                <div class="o_menu_item" data-id="__filter__556">
+                                    <a href="#" role="menuitem" class="dropdown-item">
+                                        Late Activities
+
+
+                                    </a>
+
+                                </div>
+
+
+
+                                <div class="o_menu_item" data-id="__filter__557">
+                                    <a href="#" role="menuitem" class="dropdown-item">
+                                        Today Activities
+
+
+                                    </a>
+
+                                </div>
+
+
+
+                                <div class="o_menu_item" data-id="__filter__558">
+                                    <a href="#" role="menuitem" class="dropdown-item">
+                                        Future Activities
+
+
+                                    </a>
+
+                                </div>
+
+
+
+
+
+                                <div class="dropdown-divider" role="separator"></div>
+                                <button aria-expanded="false" class="dropdown-item o_add_custom_filter o_closed_menu" type="button">Add Custom Filter</button>
+                                <div class="dropdown-item-text o_add_filter_menu">
+                                    <button class="btn btn-primary o_apply_filter" type="button">Apply</button>
+                                    <button class="btn btn-secondary o_add_condition" type="button">
+                                        <span class="fa fa-plus-circle"></span>
+                                        Add a condition
+                                    </button>
+                                </div>
+                            </div>
+                        </div><div class="btn-group o_dropdown">
+                            <button aria-expanded="false" data-toggle="dropdown" class="o_dropdown_toggler_btn btn btn-secondary dropdown-toggle" tabindex="-1">
+                                <span class="fa fa-bars"></span> Group By 
+                            </button>
+                            <div class="dropdown-menu o_dropdown_menu o_group_by_menu" role="menu">
+
+
+
+
+                                <div class="dropdown-divider" data-removable="1" role="separator"></div>
+                                <div class="o_menu_item" data-id="__groupby__544">
+                                    <a href="#" role="menuitem" class="dropdown-item">
+                                        Manager
+
+
+                                    </a>
+
+                                </div>
+
+
+
+                                <div class="o_menu_item" data-id="__groupby__545">
+                                    <a href="#" role="menuitem" class="dropdown-item">
+                                        Coach
+
+
+                                    </a>
+
+                                </div>
+
+
+
+                                <div class="o_menu_item" data-id="__groupby__546">
+                                    <a href="#" role="menuitem" class="dropdown-item">
+                                        Department
+
+
+                                    </a>
+
+                                </div>
+
+
+
+                                <div class="o_menu_item" data-id="__groupby__547">
+                                    <a href="#" role="menuitem" class="dropdown-item">
+                                        Job
+
+
+                                    </a>
+
+                                </div>
+
+
+
+
+
+                                <div class="dropdown-divider o_generator_menu" role="separator"></div>
+                                <button aria-expanded="false" class="dropdown-item o_generator_menu o_add_custom_group" type="button">Add Custom Group</button>
+
+
+                            </div>
+                        </div><div class="btn-group o_dropdown o_hidden">
+                            <button aria-expanded="false" data-toggle="dropdown" class="o_dropdown_toggler_btn btn btn-secondary dropdown-toggle o_time_range_menu_button" tabindex="-1">
+                                <span class="fa fa-calendar"></span> Time Ranges <span class="caret"></span>
+                            </button>
+                            <div class="dropdown-menu o_dropdown_menu o_time_range_menu" role="menu">
+                                <div class="dropdown-item-text">
+                                    <label for="date_field_selector">Based On</label>
+                                    <select class="o_input o_date_field_selector" id="date_field_selector">
+
+
+                                        <option value="medic_exam" selected="selected">
+                                            Medical Examination Date
+                                        </option>
+
+
+
+                                        <option value="visa_expire">
+                                            Visa Expire Date
+                                        </option>
+
+
+
+                                        <option value="spouse_birthdate">
+                                            Spouse Birthdate
+                                        </option>
+
+
+
+                                        <option value="birthday">
+                                            Date of Birth
+                                        </option>
+
+
+
+                                        <option value="create_date">
+                                            Created on
+                                        </option>
+
+
+
+                                        <option value="timesheet_validated">
+                                            Timesheets Validation Date
+                                        </option>
+
+
+
+                                        <option value="write_date">
+                                            Last Updated on
+                                        </option>
+
+
+                                    </select>
+                                </div>
+                                <div class="dropdown-item-text">
+                                    <label for="time_range_selector">Range</label>
+                                    <select class="o_input o_time_range_selector" id="time_range_selector">
+
+
+
+
+
+                                        <option value="last_7_days" selected="selected">
+                                            Last 7 Days
+                                        </option>
+
+
+
+
+
+                                        <option value="last_30_days">
+                                            Last 30 Days
+                                        </option>
+
+
+
+
+
+                                        <option value="last_365_days">
+                                            Last 365 Days
+                                        </option>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <optgroup></optgroup>
+
+
+
+
+
+
+
+
+
+                                        <option value="today">
+                                            Today
+                                        </option>
+
+
+
+
+
+                                        <option value="this_week">
+                                            This Week
+                                        </option>
+
+
+
+
+
+                                        <option value="this_month">
+                                            This Month
+                                        </option>
+
+
+
+
+
+                                        <option value="this_quarter">
+                                            This Quarter
+                                        </option>
+
+
+
+
+
+                                        <option value="this_year">
+                                            This Year
+                                        </option>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <optgroup></optgroup>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <option value="yesterday">
+                                            Yesterday
+                                        </option>
+
+
+
+
+
+                                        <option value="last_week">
+                                            Last Week
+                                        </option>
+
+
+
+
+
+                                        <option value="last_month">
+                                            Last Month
+                                        </option>
+
+
+
+
+
+                                        <option value="last_quarter">
+                                            Last Quarter
+                                        </option>
+
+
+
+
+
+                                        <option value="last_year">
+                                            Last Year
+                                        </option>
+
+
+
+
+                                    </select>
+                                </div>
+                                <div class="dropdown-item-text">
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input o_comparison_checkbox" id="comparison_checkbox" type="checkbox">
+                                        <label class="custom-control-label" for="comparison_checkbox">Compare To</label>
+                                    </div>
+                                    <select class="o_input o_comparison_time_range_selector o_hidden">
+
+
+                                        <option value="previous_period" selected="selected">
+                                            Previous Period
+                                        </option>
+
+
+
+                                        <option value="previous_year">
+                                            Previous Year
+                                        </option>
+
+
+                                    </select>
+                                </div>
+                                <div class="dropdown-item-text">
+                                    <button class="btn btn-primary o_apply_range" type="button">Apply</button>
+                                </div>
+                            </div>
+                        </div><div class="btn-group o_dropdown">
+                            <button aria-expanded="false" aria-label="Favorites" data-toggle="dropdown" class="o_dropdown_toggler_btn btn btn-secondary dropdown-toggle" tabindex="-1" title="Favorites">
+                                <span class="fa fa-star"></span> Favorites 
+                            </button>
+                            <div class="dropdown-menu o_favorites_menu" role="menu">
+                                <div class="dropdown-divider user_filter" role="separator"></div>
+                                <div class="dropdown-divider shared_filter" role="separator"></div>
+                                <a aria-expanded="false" class="dropdown-item o_save_search o_closed_menu" href="#" role="button">Save current search</a>
+                                <div class="dropdown-item-text o_save_name" role="menuitem">
+                                    <input class="o_input" type="text" value="Employees">
+                                </div>
+
+                                <div class="dropdown-item-text o_save_name" role="menuitem">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" id="o_fav_menu_use_by_default_checkbox_542" type="checkbox">
+                                        <label class="custom-control-label" for="o_fav_menu_use_by_default_checkbox_542">Use by default</label>
+                                    </div>
+                                </div>
+                                <div class="dropdown-item-text o_save_name" role="menuitem">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" id="o_fav_menu_share_all_users_checkbox_542" type="checkbox">
+                                        <label class="custom-control-label" for="o_fav_menu_share_all_users_checkbox_542">Share with all users <span aria-label="Users" class="fa fa-users" role="img" title="Users"></span></label>
+                                    </div>
+                                </div>
+                                <div class="dropdown-item-text o_save_name">
+                                    <button class="btn btn-primary" type="button">Save</button>
+                                </div>
+                            </div>
+                        </div></div></div>
+                <nav aria-label="Pager" class="o_cp_pager" role="search"><div>
+                        <span class="o_pager_counter">
+                            <span class="o_pager_value">5</span> / <span class="o_pager_limit">22</span>
+                        </span>
+                        <span aria-atomic="true" class="btn-group">
+
+
+
+
+
+                            <button aria-label="Previous" class="fa fa-chevron-left btn btn-secondary o_pager_previous" accesskey="p" tabindex="-1" title="Previous" type="button"></button>
+                            <button aria-label="Next" class="fa fa-chevron-right btn btn-secondary o_pager_next" accesskey="n" tabindex="-1" title="Next" type="button"></button>
+                        </span>
+                    </div></nav>
+                <nav aria-label="View switcher" class="btn-group o_cp_switch_buttons" role="toolbar"></nav>
+            </div>
+        </div><div class="o_content"><div class="o_view_controller"><div class="o_form_view o_form_editable"><div class="o_form_sheet_bg"><div class="clearfix o_form_sheet"><div class="o_not_full oe_button_box"><button type="button" name="267" class="btn oe_stat_button"><i class="fa fa-fw o_button_icon fa-book"></i><div name="contracts_count" class="o_field_widget o_stat_info o_readonly_modifier">
+                                        <span class="o_stat_value">0</span>
+                                        <span class="o_stat_text">Contracts</span>
+                                    </div></button><button type="button" name="292" class="btn oe_stat_button" help="Remaining leaves" data-original-title="" title=""><i class="fa fa-fw o_button_icon fa-calendar"></i><div name="leaves_count" class="o_field_widget o_stat_info o_readonly_modifier">
+                                        <span class="o_stat_value">0.00</span>
+                                        <span class="o_stat_text">Leaves Left</span>
+                                    </div></button><button type="button" name="570" class="btn oe_stat_button"><i class="fa fa-fw o_button_icon fa-money"></i><div name="payslip_count" class="o_field_widget o_stat_info o_readonly_modifier">
+                                        <span class="o_stat_value">0</span>
+                                        <span class="o_stat_text">Payslips</span>
+                                    </div></button><button type="button" class="btn oe_stat_button" name="website_publish_button"><i class="fa fa-fw o_button_icon fa-globe"></i><div class="o_stat_info published o_field_widget" name="website_published">
+                                        <span class="o_stat_text o_value text-danger">Unpublished</span>
+                                        <span class="o_stat_text">On Website</span>
+                                    </div><div class="o_field_boolean o_field_widget custom-control custom-checkbox o_invisible_modifier" name="is_published"><input type="checkbox" id="o_field_input_771" class="custom-control-input"><label for="o_field_input_771" class="custom-control-label">​</label></div></button><button type="button" class="btn oe_stat_button" name="725"><i class="fa fa-fw o_button_icon fa-calendar"></i><div class="o_stat_info"><span class="o_stat_text">Timesheets</span></div></button><button type="button" name="toggle_active" class="btn oe_stat_button"><i class="fa fa-fw o_button_icon fa-archive"></i><div class="o_stat_info o_field_widget" name="active" data-original-title="" title=""><span class="o_stat_text o_not_hover text-success">Active</span><span class="o_stat_text o_hover text-danger">Archive</span></div></button><div class="o_field_boolean o_field_widget custom-control custom-checkbox o_invisible_modifier o_readonly_modifier" name="show_leaves"><input type="checkbox" id="checkbox-855" class="custom-control-input" disabled="disabled" checked="checked"><label for="o_field_input_766" class="custom-control-label">​</label></div></div><div id="o_employee_container"><div id="o_employee_main"><div aria-atomic="true" class="o_field_image o_field_widget oe_avatar" name="image" data-original-title="" title=""><img alt="Binary file" class="img img-fluid" name="image" src="resources/images/image_002.jpg" border="1">
+
+                                        <div class="o_form_image_controls">
+                                            <button aria-label="Edit" class="fa fa-pencil fa-lg float-left o_select_file_button" title="Edit"></button>
+                                            <button aria-label="Clear" class="fa fa-trash-o fa-lg float-right o_clear_file_button" title="Clear"></button>
+
+                                            <span class="o_form_binary_progress">Uploading...</span>
+
+                                            <div aria-atomic="true" class="o_hidden_input_file ">
+                                                <form class="o_form_binary_form" enctype="multipart/form-data" method="post" action="/web/binary/upload">
+                                                    <input name="csrf_token" value="2067984cbb59c090129d93343d8e2640ee21f418o" type="hidden">
+
+                                                    <input name="callback" type="hidden">
+
+                                                    <input class="o_input_file" name="ufile" type="file">
+
+
+
+
+                                                </form>
+                                                <iframe style="display: none"></iframe>
+                                            </div>
+
+                                        </div>
+
+                                    </div><div class="oe_title"><label class="o_form_label oe_edit_only" for="o_field_input_774">Name</label><h1><input class="o_field_char o_field_widget o_input o_required_modifier" name="name" placeholder="Employee's Name" type="text" id="o_field_input_774" value="Doris Cole"></h1></div><div class="o_field_many2manytags o_input o_field_widget" name="category_ids">
+
+                                        <div aria-atomic="true" class="o_field_widget o_field_many2one" name="category_ids">
+                                            <div class="o_input_dropdown">
+                                                <input class="o_input ui-autocomplete-input" placeholder="e.g. Part Time" type="text" autocomplete="off" id="o_field_input_775">
+                                                <a class="o_dropdown_button" draggable="false" role="button"></a>
+                                            </div>
+
+                                        </div></div><div class="o_notebook"><ul class="nav nav-tabs"><li class="nav-item"><a data-toggle="tab" disable_anchor="true" href="#notebook_page_857" class="nav-link active show" role="tab" aria-selected="true">Work Information</a></li><li class="nav-item o_invisible_modifier"><a data-toggle="tab" disable_anchor="true" href="#notebook_page_859" class="nav-link" role="tab">Received Badges</a></li><li class="nav-item"><a data-toggle="tab" disable_anchor="true" href="#notebook_page_861" class="nav-link" role="tab" aria-selected="false">Private Information</a></li><li class="nav-item"><a data-toggle="tab" disable_anchor="true" href="#notebook_page_870" class="nav-link" role="tab" aria-selected="false">HR Settings</a></li></ul><div class="tab-content"><div class="tab-pane active show" id="notebook_page_857"><div class="o_group"><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">Contact Information</div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_777">Work Address</label></td><td style="width: 100%;"><div aria-atomic="true" class="o_field_widget o_field_many2one" name="address_id">
+                                                                        <div class="o_input_dropdown">
+                                                                            <input class="o_input ui-autocomplete-input" type="text" autocomplete="off" id="o_field_input_777">
+                                                                            <a class="o_dropdown_button" draggable="false" role="button"></a>
+                                                                        </div>
+                                                                        <button aria-label="External link" class="fa fa-external-link btn btn-secondary o_external_button" draggable="false" tabindex="-1" title="External link" type="button" style="display: none;"></button>
+                                                                    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_778">Work Location</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_input" name="work_location" placeholder="" type="text" id="o_field_input_778" value="Building 1, Second Floor"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_779">Work Email</label></td><td style="width: 100%;"><input class="o_field_email o_field_widget o_input" name="work_email" placeholder="" type="text" id="o_field_input_779" value="doris.cole31@example.com"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_780">Work Mobile</label></td><td style="width: 100%;"><input class="o_field_phone o_field_widget o_input" name="mobile_phone" placeholder="" type="text" id="o_field_input_780"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_781">Work Phone</label></td><td style="width: 100%;"><input class="o_field_phone o_field_widget o_input" name="work_phone" placeholder="" type="text" id="o_field_input_781" value="(883)-331-5378"></td></tr></tbody></table><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">Position</div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_782">Department</label></td><td style="width: 100%;"><div aria-atomic="true" class="o_field_widget o_field_many2one o_with_button" name="department_id">
+                                                                        <div class="o_input_dropdown">
+                                                                            <input class="o_input ui-autocomplete-input" type="text" autocomplete="off" id="o_field_input_782" value="Professional Services">
+                                                                            <a class="o_dropdown_button" draggable="false" role="button"></a>
+                                                                        </div>
+                                                                        <button aria-label="External link" class="fa fa-external-link btn btn-secondary o_external_button" draggable="false" tabindex="-1" title="External link" type="button" style="display: inline-block;"></button>
+                                                                    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_783">Job Position</label></td><td style="width: 100%;"><div aria-atomic="true" class="o_field_widget o_field_many2one o_with_button" name="job_id">
+                                                                        <div class="o_input_dropdown">
+                                                                            <input class="o_input ui-autocomplete-input" type="text" autocomplete="off" id="o_field_input_783" value="Consultant">
+                                                                            <a class="o_dropdown_button" draggable="false" role="button"></a>
+                                                                        </div>
+                                                                        <button aria-label="External link" class="fa fa-external-link btn btn-secondary o_external_button" draggable="false" tabindex="-1" title="External link" type="button" style="display: inline-block;"></button>
+                                                                    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_784">Job Title</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_input" name="job_title" placeholder="" type="text" id="o_field_input_784"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_785">Manager</label></td><td style="width: 100%;"><div aria-atomic="true" class="o_field_widget o_field_many2one" name="parent_id">
+                                                                        <div class="o_input_dropdown">
+                                                                            <input class="o_input ui-autocomplete-input" type="text" autocomplete="off" id="o_field_input_785">
+                                                                            <a class="o_dropdown_button" draggable="false" role="button"></a>
+                                                                        </div>
+                                                                        <button aria-label="External link" class="fa fa-external-link btn btn-secondary o_external_button" draggable="false" tabindex="-1" title="External link" type="button" style="display: none;"></button>
+                                                                    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_786">Coach</label></td><td style="width: 100%;"><div aria-atomic="true" class="o_field_widget o_field_many2one" name="coach_id">
+                                                                        <div class="o_input_dropdown">
+                                                                            <input class="o_input ui-autocomplete-input" type="text" autocomplete="off" id="o_field_input_786">
+                                                                            <a class="o_dropdown_button" draggable="false" role="button"></a>
+                                                                        </div>
+                                                                        <button aria-label="External link" class="fa fa-external-link btn btn-secondary o_external_button" draggable="false" tabindex="-1" title="External link" type="button" style="display: none;"></button>
+                                                                    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_788">Is a Manager</label></td><td style="width: 100%;"><div class="o_field_boolean o_field_widget custom-control custom-checkbox o_invisible_modifier" name="manager"><input type="checkbox" id="o_field_input_788" class="custom-control-input"><label for="o_field_input_788" class="custom-control-label">​</label></div></td></tr><tr><td class="o_td_label"><label class="o_form_label o_required_modifier" for="o_field_input_789" data-original-title="" title="">Working Hours</label></td><td style="width: 100%;"><div aria-atomic="true" class="o_field_widget o_field_many2one o_with_button o_required_modifier" name="resource_calendar_id">
+                                                                        <div class="o_input_dropdown">
+                                                                            <input class="o_input ui-autocomplete-input" type="text" autocomplete="off" id="o_field_input_789" value="Standard 40 Hours/Week">
+                                                                            <a class="o_dropdown_button" draggable="false" role="button"></a>
+                                                                        </div>
+                                                                        <button aria-label="External link" class="fa fa-external-link btn btn-secondary o_external_button" draggable="false" tabindex="-1" title="External link" type="button" style="display: inline-block;"></button>
+                                                                    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_790" data-original-title="" title="">Timezone</label></td><td style="width: 100%;"><select class="o_input o_field_widget" name="tz" id="o_field_input_790"><option value="false"></option><option value="&quot;Africa/Abidjan&quot;">Africa/Abidjan</option><option value="&quot;Africa/Accra&quot;">Africa/Accra</option><option value="&quot;Africa/Addis_Ababa&quot;">Africa/Addis_Ababa</option><option value="&quot;Africa/Algiers&quot;">Africa/Algiers</option><option value="&quot;Africa/Asmara&quot;">Africa/Asmara</option><option value="&quot;Africa/Asmera&quot;">Africa/Asmera</option><option value="&quot;Africa/Bamako&quot;">Africa/Bamako</option><option value="&quot;Africa/Bangui&quot;">Africa/Bangui</option><option value="&quot;Africa/Banjul&quot;">Africa/Banjul</option><option value="&quot;Africa/Bissau&quot;">Africa/Bissau</option><option value="&quot;Africa/Blantyre&quot;">Africa/Blantyre</option><option value="&quot;Africa/Brazzaville&quot;">Africa/Brazzaville</option><option value="&quot;Africa/Bujumbura&quot;">Africa/Bujumbura</option><option value="&quot;Africa/Cairo&quot;">Africa/Cairo</option><option value="&quot;Africa/Casablanca&quot;">Africa/Casablanca</option><option value="&quot;Africa/Ceuta&quot;">Africa/Ceuta</option><option value="&quot;Africa/Conakry&quot;">Africa/Conakry</option><option value="&quot;Africa/Dakar&quot;">Africa/Dakar</option><option value="&quot;Africa/Dar_es_Salaam&quot;">Africa/Dar_es_Salaam</option><option value="&quot;Africa/Djibouti&quot;">Africa/Djibouti</option><option value="&quot;Africa/Douala&quot;">Africa/Douala</option><option value="&quot;Africa/El_Aaiun&quot;">Africa/El_Aaiun</option><option value="&quot;Africa/Freetown&quot;">Africa/Freetown</option><option value="&quot;Africa/Gaborone&quot;">Africa/Gaborone</option><option value="&quot;Africa/Harare&quot;">Africa/Harare</option><option value="&quot;Africa/Johannesburg&quot;">Africa/Johannesburg</option><option value="&quot;Africa/Juba&quot;">Africa/Juba</option><option value="&quot;Africa/Kampala&quot;">Africa/Kampala</option><option value="&quot;Africa/Khartoum&quot;">Africa/Khartoum</option><option value="&quot;Africa/Kigali&quot;">Africa/Kigali</option><option value="&quot;Africa/Kinshasa&quot;">Africa/Kinshasa</option><option value="&quot;Africa/Lagos&quot;">Africa/Lagos</option><option value="&quot;Africa/Libreville&quot;">Africa/Libreville</option><option value="&quot;Africa/Lome&quot;">Africa/Lome</option><option value="&quot;Africa/Luanda&quot;">Africa/Luanda</option><option value="&quot;Africa/Lubumbashi&quot;">Africa/Lubumbashi</option><option value="&quot;Africa/Lusaka&quot;">Africa/Lusaka</option><option value="&quot;Africa/Malabo&quot;">Africa/Malabo</option><option value="&quot;Africa/Maputo&quot;">Africa/Maputo</option><option value="&quot;Africa/Maseru&quot;">Africa/Maseru</option><option value="&quot;Africa/Mbabane&quot;">Africa/Mbabane</option><option value="&quot;Africa/Mogadishu&quot;">Africa/Mogadishu</option><option value="&quot;Africa/Monrovia&quot;">Africa/Monrovia</option><option value="&quot;Africa/Nairobi&quot;">Africa/Nairobi</option><option value="&quot;Africa/Ndjamena&quot;">Africa/Ndjamena</option><option value="&quot;Africa/Niamey&quot;">Africa/Niamey</option><option value="&quot;Africa/Nouakchott&quot;">Africa/Nouakchott</option><option value="&quot;Africa/Ouagadougou&quot;">Africa/Ouagadougou</option><option value="&quot;Africa/Porto-Novo&quot;">Africa/Porto-Novo</option><option value="&quot;Africa/Sao_Tome&quot;">Africa/Sao_Tome</option><option value="&quot;Africa/Timbuktu&quot;">Africa/Timbuktu</option><option value="&quot;Africa/Tripoli&quot;">Africa/Tripoli</option><option value="&quot;Africa/Tunis&quot;">Africa/Tunis</option><option value="&quot;Africa/Windhoek&quot;">Africa/Windhoek</option><option value="&quot;America/Adak&quot;">America/Adak</option><option value="&quot;America/Anchorage&quot;">America/Anchorage</option><option value="&quot;America/Anguilla&quot;">America/Anguilla</option><option value="&quot;America/Antigua&quot;">America/Antigua</option><option value="&quot;America/Araguaina&quot;">America/Araguaina</option><option value="&quot;America/Argentina/Buenos_Aires&quot;">America/Argentina/Buenos_Aires</option><option value="&quot;America/Argentina/Catamarca&quot;">America/Argentina/Catamarca</option><option value="&quot;America/Argentina/ComodRivadavia&quot;">America/Argentina/ComodRivadavia</option><option value="&quot;America/Argentina/Cordoba&quot;">America/Argentina/Cordoba</option><option value="&quot;America/Argentina/Jujuy&quot;">America/Argentina/Jujuy</option><option value="&quot;America/Argentina/La_Rioja&quot;">America/Argentina/La_Rioja</option><option value="&quot;America/Argentina/Mendoza&quot;">America/Argentina/Mendoza</option><option value="&quot;America/Argentina/Rio_Gallegos&quot;">America/Argentina/Rio_Gallegos</option><option value="&quot;America/Argentina/Salta&quot;">America/Argentina/Salta</option><option value="&quot;America/Argentina/San_Juan&quot;">America/Argentina/San_Juan</option><option value="&quot;America/Argentina/San_Luis&quot;">America/Argentina/San_Luis</option><option value="&quot;America/Argentina/Tucuman&quot;">America/Argentina/Tucuman</option><option value="&quot;America/Argentina/Ushuaia&quot;">America/Argentina/Ushuaia</option><option value="&quot;America/Aruba&quot;">America/Aruba</option><option value="&quot;America/Asuncion&quot;">America/Asuncion</option><option value="&quot;America/Atikokan&quot;">America/Atikokan</option><option value="&quot;America/Atka&quot;">America/Atka</option><option value="&quot;America/Bahia&quot;">America/Bahia</option><option value="&quot;America/Bahia_Banderas&quot;">America/Bahia_Banderas</option><option value="&quot;America/Barbados&quot;">America/Barbados</option><option value="&quot;America/Belem&quot;">America/Belem</option><option value="&quot;America/Belize&quot;">America/Belize</option><option value="&quot;America/Blanc-Sablon&quot;">America/Blanc-Sablon</option><option value="&quot;America/Boa_Vista&quot;">America/Boa_Vista</option><option value="&quot;America/Bogota&quot;">America/Bogota</option><option value="&quot;America/Boise&quot;">America/Boise</option><option value="&quot;America/Buenos_Aires&quot;">America/Buenos_Aires</option><option value="&quot;America/Cambridge_Bay&quot;">America/Cambridge_Bay</option><option value="&quot;America/Campo_Grande&quot;">America/Campo_Grande</option><option value="&quot;America/Cancun&quot;">America/Cancun</option><option value="&quot;America/Caracas&quot;">America/Caracas</option><option value="&quot;America/Catamarca&quot;">America/Catamarca</option><option value="&quot;America/Cayenne&quot;">America/Cayenne</option><option value="&quot;America/Cayman&quot;">America/Cayman</option><option value="&quot;America/Chicago&quot;">America/Chicago</option><option value="&quot;America/Chihuahua&quot;">America/Chihuahua</option><option value="&quot;America/Coral_Harbour&quot;">America/Coral_Harbour</option><option value="&quot;America/Cordoba&quot;">America/Cordoba</option><option value="&quot;America/Costa_Rica&quot;">America/Costa_Rica</option><option value="&quot;America/Creston&quot;">America/Creston</option><option value="&quot;America/Cuiaba&quot;">America/Cuiaba</option><option value="&quot;America/Curacao&quot;">America/Curacao</option><option value="&quot;America/Danmarkshavn&quot;">America/Danmarkshavn</option><option value="&quot;America/Dawson&quot;">America/Dawson</option><option value="&quot;America/Dawson_Creek&quot;">America/Dawson_Creek</option><option value="&quot;America/Denver&quot;">America/Denver</option><option value="&quot;America/Detroit&quot;">America/Detroit</option><option value="&quot;America/Dominica&quot;">America/Dominica</option><option value="&quot;America/Edmonton&quot;">America/Edmonton</option><option value="&quot;America/Eirunepe&quot;">America/Eirunepe</option><option value="&quot;America/El_Salvador&quot;">America/El_Salvador</option><option value="&quot;America/Ensenada&quot;">America/Ensenada</option><option value="&quot;America/Fort_Wayne&quot;">America/Fort_Wayne</option><option value="&quot;America/Fortaleza&quot;">America/Fortaleza</option><option value="&quot;America/Glace_Bay&quot;">America/Glace_Bay</option><option value="&quot;America/Godthab&quot;">America/Godthab</option><option value="&quot;America/Goose_Bay&quot;">America/Goose_Bay</option><option value="&quot;America/Grand_Turk&quot;">America/Grand_Turk</option><option value="&quot;America/Grenada&quot;">America/Grenada</option><option value="&quot;America/Guadeloupe&quot;">America/Guadeloupe</option><option value="&quot;America/Guatemala&quot;">America/Guatemala</option><option value="&quot;America/Guayaquil&quot;">America/Guayaquil</option><option value="&quot;America/Guyana&quot;">America/Guyana</option><option value="&quot;America/Halifax&quot;">America/Halifax</option><option value="&quot;America/Havana&quot;">America/Havana</option><option value="&quot;America/Hermosillo&quot;">America/Hermosillo</option><option value="&quot;America/Indiana/Indianapolis&quot;">America/Indiana/Indianapolis</option><option value="&quot;America/Indiana/Knox&quot;">America/Indiana/Knox</option><option value="&quot;America/Indiana/Marengo&quot;">America/Indiana/Marengo</option><option value="&quot;America/Indiana/Petersburg&quot;">America/Indiana/Petersburg</option><option value="&quot;America/Indiana/Tell_City&quot;">America/Indiana/Tell_City</option><option value="&quot;America/Indiana/Vevay&quot;">America/Indiana/Vevay</option><option value="&quot;America/Indiana/Vincennes&quot;">America/Indiana/Vincennes</option><option value="&quot;America/Indiana/Winamac&quot;">America/Indiana/Winamac</option><option value="&quot;America/Indianapolis&quot;">America/Indianapolis</option><option value="&quot;America/Inuvik&quot;">America/Inuvik</option><option value="&quot;America/Iqaluit&quot;">America/Iqaluit</option><option value="&quot;America/Jamaica&quot;">America/Jamaica</option><option value="&quot;America/Jujuy&quot;">America/Jujuy</option><option value="&quot;America/Juneau&quot;">America/Juneau</option><option value="&quot;America/Kentucky/Louisville&quot;">America/Kentucky/Louisville</option><option value="&quot;America/Kentucky/Monticello&quot;">America/Kentucky/Monticello</option><option value="&quot;America/Knox_IN&quot;">America/Knox_IN</option><option value="&quot;America/Kralendijk&quot;">America/Kralendijk</option><option value="&quot;America/La_Paz&quot;">America/La_Paz</option><option value="&quot;America/Lima&quot;">America/Lima</option><option value="&quot;America/Los_Angeles&quot;">America/Los_Angeles</option><option value="&quot;America/Louisville&quot;">America/Louisville</option><option value="&quot;America/Lower_Princes&quot;">America/Lower_Princes</option><option value="&quot;America/Maceio&quot;">America/Maceio</option><option value="&quot;America/Managua&quot;">America/Managua</option><option value="&quot;America/Manaus&quot;">America/Manaus</option><option value="&quot;America/Marigot&quot;">America/Marigot</option><option value="&quot;America/Martinique&quot;">America/Martinique</option><option value="&quot;America/Matamoros&quot;">America/Matamoros</option><option value="&quot;America/Mazatlan&quot;">America/Mazatlan</option><option value="&quot;America/Mendoza&quot;">America/Mendoza</option><option value="&quot;America/Menominee&quot;">America/Menominee</option><option value="&quot;America/Merida&quot;">America/Merida</option><option value="&quot;America/Metlakatla&quot;">America/Metlakatla</option><option value="&quot;America/Mexico_City&quot;">America/Mexico_City</option><option value="&quot;America/Miquelon&quot;">America/Miquelon</option><option value="&quot;America/Moncton&quot;">America/Moncton</option><option value="&quot;America/Monterrey&quot;">America/Monterrey</option><option value="&quot;America/Montevideo&quot;">America/Montevideo</option><option value="&quot;America/Montreal&quot;">America/Montreal</option><option value="&quot;America/Montserrat&quot;">America/Montserrat</option><option value="&quot;America/Nassau&quot;">America/Nassau</option><option value="&quot;America/New_York&quot;">America/New_York</option><option value="&quot;America/Nipigon&quot;">America/Nipigon</option><option value="&quot;America/Nome&quot;">America/Nome</option><option value="&quot;America/Noronha&quot;">America/Noronha</option><option value="&quot;America/North_Dakota/Beulah&quot;">America/North_Dakota/Beulah</option><option value="&quot;America/North_Dakota/Center&quot;">America/North_Dakota/Center</option><option value="&quot;America/North_Dakota/New_Salem&quot;">America/North_Dakota/New_Salem</option><option value="&quot;America/Ojinaga&quot;">America/Ojinaga</option><option value="&quot;America/Panama&quot;">America/Panama</option><option value="&quot;America/Pangnirtung&quot;">America/Pangnirtung</option><option value="&quot;America/Paramaribo&quot;">America/Paramaribo</option><option value="&quot;America/Phoenix&quot;">America/Phoenix</option><option value="&quot;America/Port-au-Prince&quot;">America/Port-au-Prince</option><option value="&quot;America/Port_of_Spain&quot;">America/Port_of_Spain</option><option value="&quot;America/Porto_Acre&quot;">America/Porto_Acre</option><option value="&quot;America/Porto_Velho&quot;">America/Porto_Velho</option><option value="&quot;America/Puerto_Rico&quot;">America/Puerto_Rico</option><option value="&quot;America/Rainy_River&quot;">America/Rainy_River</option><option value="&quot;America/Rankin_Inlet&quot;">America/Rankin_Inlet</option><option value="&quot;America/Recife&quot;">America/Recife</option><option value="&quot;America/Regina&quot;">America/Regina</option><option value="&quot;America/Resolute&quot;">America/Resolute</option><option value="&quot;America/Rio_Branco&quot;">America/Rio_Branco</option><option value="&quot;America/Rosario&quot;">America/Rosario</option><option value="&quot;America/Santa_Isabel&quot;">America/Santa_Isabel</option><option value="&quot;America/Santarem&quot;">America/Santarem</option><option value="&quot;America/Santiago&quot;">America/Santiago</option><option value="&quot;America/Santo_Domingo&quot;">America/Santo_Domingo</option><option value="&quot;America/Sao_Paulo&quot;">America/Sao_Paulo</option><option value="&quot;America/Scoresbysund&quot;">America/Scoresbysund</option><option value="&quot;America/Shiprock&quot;">America/Shiprock</option><option value="&quot;America/Sitka&quot;">America/Sitka</option><option value="&quot;America/St_Barthelemy&quot;">America/St_Barthelemy</option><option value="&quot;America/St_Johns&quot;">America/St_Johns</option><option value="&quot;America/St_Kitts&quot;">America/St_Kitts</option><option value="&quot;America/St_Lucia&quot;">America/St_Lucia</option><option value="&quot;America/St_Thomas&quot;">America/St_Thomas</option><option value="&quot;America/St_Vincent&quot;">America/St_Vincent</option><option value="&quot;America/Swift_Current&quot;">America/Swift_Current</option><option value="&quot;America/Tegucigalpa&quot;">America/Tegucigalpa</option><option value="&quot;America/Thule&quot;">America/Thule</option><option value="&quot;America/Thunder_Bay&quot;">America/Thunder_Bay</option><option value="&quot;America/Tijuana&quot;">America/Tijuana</option><option value="&quot;America/Toronto&quot;">America/Toronto</option><option value="&quot;America/Tortola&quot;">America/Tortola</option><option value="&quot;America/Vancouver&quot;">America/Vancouver</option><option value="&quot;America/Virgin&quot;">America/Virgin</option><option value="&quot;America/Whitehorse&quot;">America/Whitehorse</option><option value="&quot;America/Winnipeg&quot;">America/Winnipeg</option><option value="&quot;America/Yakutat&quot;">America/Yakutat</option><option value="&quot;America/Yellowknife&quot;">America/Yellowknife</option><option value="&quot;Antarctica/Casey&quot;">Antarctica/Casey</option><option value="&quot;Antarctica/Davis&quot;">Antarctica/Davis</option><option value="&quot;Antarctica/DumontDUrville&quot;">Antarctica/DumontDUrville</option><option value="&quot;Antarctica/Macquarie&quot;">Antarctica/Macquarie</option><option value="&quot;Antarctica/Mawson&quot;">Antarctica/Mawson</option><option value="&quot;Antarctica/McMurdo&quot;">Antarctica/McMurdo</option><option value="&quot;Antarctica/Palmer&quot;">Antarctica/Palmer</option><option value="&quot;Antarctica/Rothera&quot;">Antarctica/Rothera</option><option value="&quot;Antarctica/South_Pole&quot;">Antarctica/South_Pole</option><option value="&quot;Antarctica/Syowa&quot;">Antarctica/Syowa</option><option value="&quot;Antarctica/Troll&quot;">Antarctica/Troll</option><option value="&quot;Antarctica/Vostok&quot;">Antarctica/Vostok</option><option value="&quot;Arctic/Longyearbyen&quot;">Arctic/Longyearbyen</option><option value="&quot;Asia/Aden&quot;">Asia/Aden</option><option value="&quot;Asia/Almaty&quot;">Asia/Almaty</option><option value="&quot;Asia/Amman&quot;">Asia/Amman</option><option value="&quot;Asia/Anadyr&quot;">Asia/Anadyr</option><option value="&quot;Asia/Aqtau&quot;">Asia/Aqtau</option><option value="&quot;Asia/Aqtobe&quot;">Asia/Aqtobe</option><option value="&quot;Asia/Ashgabat&quot;">Asia/Ashgabat</option><option value="&quot;Asia/Ashkhabad&quot;">Asia/Ashkhabad</option><option value="&quot;Asia/Baghdad&quot;">Asia/Baghdad</option><option value="&quot;Asia/Bahrain&quot;">Asia/Bahrain</option><option value="&quot;Asia/Baku&quot;">Asia/Baku</option><option value="&quot;Asia/Bangkok&quot;">Asia/Bangkok</option><option value="&quot;Asia/Beirut&quot;">Asia/Beirut</option><option value="&quot;Asia/Bishkek&quot;">Asia/Bishkek</option><option value="&quot;Asia/Brunei&quot;">Asia/Brunei</option><option value="&quot;Asia/Calcutta&quot;">Asia/Calcutta</option><option value="&quot;Asia/Chita&quot;">Asia/Chita</option><option value="&quot;Asia/Choibalsan&quot;">Asia/Choibalsan</option><option value="&quot;Asia/Chongqing&quot;">Asia/Chongqing</option><option value="&quot;Asia/Chungking&quot;">Asia/Chungking</option><option value="&quot;Asia/Colombo&quot;">Asia/Colombo</option><option value="&quot;Asia/Dacca&quot;">Asia/Dacca</option><option value="&quot;Asia/Damascus&quot;">Asia/Damascus</option><option value="&quot;Asia/Dhaka&quot;">Asia/Dhaka</option><option value="&quot;Asia/Dili&quot;">Asia/Dili</option><option value="&quot;Asia/Dubai&quot;">Asia/Dubai</option><option value="&quot;Asia/Dushanbe&quot;">Asia/Dushanbe</option><option value="&quot;Asia/Gaza&quot;">Asia/Gaza</option><option value="&quot;Asia/Harbin&quot;">Asia/Harbin</option><option value="&quot;Asia/Hebron&quot;">Asia/Hebron</option><option value="&quot;Asia/Ho_Chi_Minh&quot;">Asia/Ho_Chi_Minh</option><option value="&quot;Asia/Hong_Kong&quot;">Asia/Hong_Kong</option><option value="&quot;Asia/Hovd&quot;">Asia/Hovd</option><option value="&quot;Asia/Irkutsk&quot;">Asia/Irkutsk</option><option value="&quot;Asia/Istanbul&quot;">Asia/Istanbul</option><option value="&quot;Asia/Jakarta&quot;">Asia/Jakarta</option><option value="&quot;Asia/Jayapura&quot;">Asia/Jayapura</option><option value="&quot;Asia/Jerusalem&quot;">Asia/Jerusalem</option><option value="&quot;Asia/Kabul&quot;">Asia/Kabul</option><option value="&quot;Asia/Kamchatka&quot;">Asia/Kamchatka</option><option value="&quot;Asia/Karachi&quot;">Asia/Karachi</option><option value="&quot;Asia/Kashgar&quot;">Asia/Kashgar</option><option value="&quot;Asia/Kathmandu&quot;">Asia/Kathmandu</option><option value="&quot;Asia/Katmandu&quot;">Asia/Katmandu</option><option value="&quot;Asia/Khandyga&quot;">Asia/Khandyga</option><option value="&quot;Asia/Kolkata&quot;">Asia/Kolkata</option><option value="&quot;Asia/Krasnoyarsk&quot;">Asia/Krasnoyarsk</option><option value="&quot;Asia/Kuala_Lumpur&quot;">Asia/Kuala_Lumpur</option><option value="&quot;Asia/Kuching&quot;">Asia/Kuching</option><option value="&quot;Asia/Kuwait&quot;">Asia/Kuwait</option><option value="&quot;Asia/Macao&quot;">Asia/Macao</option><option value="&quot;Asia/Macau&quot;">Asia/Macau</option><option value="&quot;Asia/Magadan&quot;">Asia/Magadan</option><option value="&quot;Asia/Makassar&quot;">Asia/Makassar</option><option value="&quot;Asia/Manila&quot;">Asia/Manila</option><option value="&quot;Asia/Muscat&quot;">Asia/Muscat</option><option value="&quot;Asia/Nicosia&quot;">Asia/Nicosia</option><option value="&quot;Asia/Novokuznetsk&quot;">Asia/Novokuznetsk</option><option value="&quot;Asia/Novosibirsk&quot;">Asia/Novosibirsk</option><option value="&quot;Asia/Omsk&quot;">Asia/Omsk</option><option value="&quot;Asia/Oral&quot;">Asia/Oral</option><option value="&quot;Asia/Phnom_Penh&quot;">Asia/Phnom_Penh</option><option value="&quot;Asia/Pontianak&quot;">Asia/Pontianak</option><option value="&quot;Asia/Pyongyang&quot;">Asia/Pyongyang</option><option value="&quot;Asia/Qatar&quot;">Asia/Qatar</option><option value="&quot;Asia/Qyzylorda&quot;">Asia/Qyzylorda</option><option value="&quot;Asia/Rangoon&quot;">Asia/Rangoon</option><option value="&quot;Asia/Riyadh&quot;">Asia/Riyadh</option><option value="&quot;Asia/Saigon&quot;">Asia/Saigon</option><option value="&quot;Asia/Sakhalin&quot;">Asia/Sakhalin</option><option value="&quot;Asia/Samarkand&quot;">Asia/Samarkand</option><option value="&quot;Asia/Seoul&quot;">Asia/Seoul</option><option value="&quot;Asia/Shanghai&quot;">Asia/Shanghai</option><option value="&quot;Asia/Singapore&quot;">Asia/Singapore</option><option value="&quot;Asia/Srednekolymsk&quot;">Asia/Srednekolymsk</option><option value="&quot;Asia/Taipei&quot;">Asia/Taipei</option><option value="&quot;Asia/Tashkent&quot;">Asia/Tashkent</option><option value="&quot;Asia/Tbilisi&quot;">Asia/Tbilisi</option><option value="&quot;Asia/Tehran&quot;">Asia/Tehran</option><option value="&quot;Asia/Tel_Aviv&quot;">Asia/Tel_Aviv</option><option value="&quot;Asia/Thimbu&quot;">Asia/Thimbu</option><option value="&quot;Asia/Thimphu&quot;">Asia/Thimphu</option><option value="&quot;Asia/Tokyo&quot;">Asia/Tokyo</option><option value="&quot;Asia/Ujung_Pandang&quot;">Asia/Ujung_Pandang</option><option value="&quot;Asia/Ulaanbaatar&quot;">Asia/Ulaanbaatar</option><option value="&quot;Asia/Ulan_Bator&quot;">Asia/Ulan_Bator</option><option value="&quot;Asia/Urumqi&quot;">Asia/Urumqi</option><option value="&quot;Asia/Ust-Nera&quot;">Asia/Ust-Nera</option><option value="&quot;Asia/Vientiane&quot;">Asia/Vientiane</option><option value="&quot;Asia/Vladivostok&quot;">Asia/Vladivostok</option><option value="&quot;Asia/Yakutsk&quot;">Asia/Yakutsk</option><option value="&quot;Asia/Yekaterinburg&quot;">Asia/Yekaterinburg</option><option value="&quot;Asia/Yerevan&quot;">Asia/Yerevan</option><option value="&quot;Atlantic/Azores&quot;">Atlantic/Azores</option><option value="&quot;Atlantic/Bermuda&quot;">Atlantic/Bermuda</option><option value="&quot;Atlantic/Canary&quot;">Atlantic/Canary</option><option value="&quot;Atlantic/Cape_Verde&quot;">Atlantic/Cape_Verde</option><option value="&quot;Atlantic/Faeroe&quot;">Atlantic/Faeroe</option><option value="&quot;Atlantic/Faroe&quot;">Atlantic/Faroe</option><option value="&quot;Atlantic/Jan_Mayen&quot;">Atlantic/Jan_Mayen</option><option value="&quot;Atlantic/Madeira&quot;">Atlantic/Madeira</option><option value="&quot;Atlantic/Reykjavik&quot;">Atlantic/Reykjavik</option><option value="&quot;Atlantic/South_Georgia&quot;">Atlantic/South_Georgia</option><option value="&quot;Atlantic/St_Helena&quot;">Atlantic/St_Helena</option><option value="&quot;Atlantic/Stanley&quot;">Atlantic/Stanley</option><option value="&quot;Australia/ACT&quot;">Australia/ACT</option><option value="&quot;Australia/Adelaide&quot;">Australia/Adelaide</option><option value="&quot;Australia/Brisbane&quot;">Australia/Brisbane</option><option value="&quot;Australia/Broken_Hill&quot;">Australia/Broken_Hill</option><option value="&quot;Australia/Canberra&quot;">Australia/Canberra</option><option value="&quot;Australia/Currie&quot;">Australia/Currie</option><option value="&quot;Australia/Darwin&quot;">Australia/Darwin</option><option value="&quot;Australia/Eucla&quot;">Australia/Eucla</option><option value="&quot;Australia/Hobart&quot;">Australia/Hobart</option><option value="&quot;Australia/LHI&quot;">Australia/LHI</option><option value="&quot;Australia/Lindeman&quot;">Australia/Lindeman</option><option value="&quot;Australia/Lord_Howe&quot;">Australia/Lord_Howe</option><option value="&quot;Australia/Melbourne&quot;">Australia/Melbourne</option><option value="&quot;Australia/NSW&quot;">Australia/NSW</option><option value="&quot;Australia/North&quot;">Australia/North</option><option value="&quot;Australia/Perth&quot;">Australia/Perth</option><option value="&quot;Australia/Queensland&quot;">Australia/Queensland</option><option value="&quot;Australia/South&quot;">Australia/South</option><option value="&quot;Australia/Sydney&quot;">Australia/Sydney</option><option value="&quot;Australia/Tasmania&quot;">Australia/Tasmania</option><option value="&quot;Australia/Victoria&quot;">Australia/Victoria</option><option value="&quot;Australia/West&quot;">Australia/West</option><option value="&quot;Australia/Yancowinna&quot;">Australia/Yancowinna</option><option value="&quot;Brazil/Acre&quot;">Brazil/Acre</option><option value="&quot;Brazil/DeNoronha&quot;">Brazil/DeNoronha</option><option value="&quot;Brazil/East&quot;">Brazil/East</option><option value="&quot;Brazil/West&quot;">Brazil/West</option><option value="&quot;CET&quot;">CET</option><option value="&quot;CST6CDT&quot;">CST6CDT</option><option value="&quot;Canada/Atlantic&quot;">Canada/Atlantic</option><option value="&quot;Canada/Central&quot;">Canada/Central</option><option value="&quot;Canada/East-Saskatchewan&quot;">Canada/East-Saskatchewan</option><option value="&quot;Canada/Eastern&quot;">Canada/Eastern</option><option value="&quot;Canada/Mountain&quot;">Canada/Mountain</option><option value="&quot;Canada/Newfoundland&quot;">Canada/Newfoundland</option><option value="&quot;Canada/Pacific&quot;">Canada/Pacific</option><option value="&quot;Canada/Saskatchewan&quot;">Canada/Saskatchewan</option><option value="&quot;Canada/Yukon&quot;">Canada/Yukon</option><option value="&quot;Chile/Continental&quot;">Chile/Continental</option><option value="&quot;Chile/EasterIsland&quot;">Chile/EasterIsland</option><option value="&quot;Cuba&quot;">Cuba</option><option value="&quot;EET&quot;">EET</option><option value="&quot;EST&quot;">EST</option><option value="&quot;EST5EDT&quot;">EST5EDT</option><option value="&quot;Egypt&quot;">Egypt</option><option value="&quot;Eire&quot;">Eire</option><option value="&quot;Europe/Amsterdam&quot;">Europe/Amsterdam</option><option value="&quot;Europe/Andorra&quot;">Europe/Andorra</option><option value="&quot;Europe/Athens&quot;">Europe/Athens</option><option value="&quot;Europe/Belfast&quot;">Europe/Belfast</option><option value="&quot;Europe/Belgrade&quot;">Europe/Belgrade</option><option value="&quot;Europe/Berlin&quot;">Europe/Berlin</option><option value="&quot;Europe/Bratislava&quot;">Europe/Bratislava</option><option value="&quot;Europe/Brussels&quot;" selected="selected">Europe/Brussels</option><option value="&quot;Europe/Bucharest&quot;">Europe/Bucharest</option><option value="&quot;Europe/Budapest&quot;">Europe/Budapest</option><option value="&quot;Europe/Busingen&quot;">Europe/Busingen</option><option value="&quot;Europe/Chisinau&quot;">Europe/Chisinau</option><option value="&quot;Europe/Copenhagen&quot;">Europe/Copenhagen</option><option value="&quot;Europe/Dublin&quot;">Europe/Dublin</option><option value="&quot;Europe/Gibraltar&quot;">Europe/Gibraltar</option><option value="&quot;Europe/Guernsey&quot;">Europe/Guernsey</option><option value="&quot;Europe/Helsinki&quot;">Europe/Helsinki</option><option value="&quot;Europe/Isle_of_Man&quot;">Europe/Isle_of_Man</option><option value="&quot;Europe/Istanbul&quot;">Europe/Istanbul</option><option value="&quot;Europe/Jersey&quot;">Europe/Jersey</option><option value="&quot;Europe/Kaliningrad&quot;">Europe/Kaliningrad</option><option value="&quot;Europe/Kiev&quot;">Europe/Kiev</option><option value="&quot;Europe/Lisbon&quot;">Europe/Lisbon</option><option value="&quot;Europe/Ljubljana&quot;">Europe/Ljubljana</option><option value="&quot;Europe/London&quot;">Europe/London</option><option value="&quot;Europe/Luxembourg&quot;">Europe/Luxembourg</option><option value="&quot;Europe/Madrid&quot;">Europe/Madrid</option><option value="&quot;Europe/Malta&quot;">Europe/Malta</option><option value="&quot;Europe/Mariehamn&quot;">Europe/Mariehamn</option><option value="&quot;Europe/Minsk&quot;">Europe/Minsk</option><option value="&quot;Europe/Monaco&quot;">Europe/Monaco</option><option value="&quot;Europe/Moscow&quot;">Europe/Moscow</option><option value="&quot;Europe/Nicosia&quot;">Europe/Nicosia</option><option value="&quot;Europe/Oslo&quot;">Europe/Oslo</option><option value="&quot;Europe/Paris&quot;">Europe/Paris</option><option value="&quot;Europe/Podgorica&quot;">Europe/Podgorica</option><option value="&quot;Europe/Prague&quot;">Europe/Prague</option><option value="&quot;Europe/Riga&quot;">Europe/Riga</option><option value="&quot;Europe/Rome&quot;">Europe/Rome</option><option value="&quot;Europe/Samara&quot;">Europe/Samara</option><option value="&quot;Europe/San_Marino&quot;">Europe/San_Marino</option><option value="&quot;Europe/Sarajevo&quot;">Europe/Sarajevo</option><option value="&quot;Europe/Simferopol&quot;">Europe/Simferopol</option><option value="&quot;Europe/Skopje&quot;">Europe/Skopje</option><option value="&quot;Europe/Sofia&quot;">Europe/Sofia</option><option value="&quot;Europe/Stockholm&quot;">Europe/Stockholm</option><option value="&quot;Europe/Tallinn&quot;">Europe/Tallinn</option><option value="&quot;Europe/Tirane&quot;">Europe/Tirane</option><option value="&quot;Europe/Tiraspol&quot;">Europe/Tiraspol</option><option value="&quot;Europe/Uzhgorod&quot;">Europe/Uzhgorod</option><option value="&quot;Europe/Vaduz&quot;">Europe/Vaduz</option><option value="&quot;Europe/Vatican&quot;">Europe/Vatican</option><option value="&quot;Europe/Vienna&quot;">Europe/Vienna</option><option value="&quot;Europe/Vilnius&quot;">Europe/Vilnius</option><option value="&quot;Europe/Volgograd&quot;">Europe/Volgograd</option><option value="&quot;Europe/Warsaw&quot;">Europe/Warsaw</option><option value="&quot;Europe/Zagreb&quot;">Europe/Zagreb</option><option value="&quot;Europe/Zaporozhye&quot;">Europe/Zaporozhye</option><option value="&quot;Europe/Zurich&quot;">Europe/Zurich</option><option value="&quot;GB&quot;">GB</option><option value="&quot;GB-Eire&quot;">GB-Eire</option><option value="&quot;GMT&quot;">GMT</option><option value="&quot;GMT+0&quot;">GMT+0</option><option value="&quot;GMT-0&quot;">GMT-0</option><option value="&quot;GMT0&quot;">GMT0</option><option value="&quot;Greenwich&quot;">Greenwich</option><option value="&quot;HST&quot;">HST</option><option value="&quot;Hongkong&quot;">Hongkong</option><option value="&quot;Iceland&quot;">Iceland</option><option value="&quot;Indian/Antananarivo&quot;">Indian/Antananarivo</option><option value="&quot;Indian/Chagos&quot;">Indian/Chagos</option><option value="&quot;Indian/Christmas&quot;">Indian/Christmas</option><option value="&quot;Indian/Cocos&quot;">Indian/Cocos</option><option value="&quot;Indian/Comoro&quot;">Indian/Comoro</option><option value="&quot;Indian/Kerguelen&quot;">Indian/Kerguelen</option><option value="&quot;Indian/Mahe&quot;">Indian/Mahe</option><option value="&quot;Indian/Maldives&quot;">Indian/Maldives</option><option value="&quot;Indian/Mauritius&quot;">Indian/Mauritius</option><option value="&quot;Indian/Mayotte&quot;">Indian/Mayotte</option><option value="&quot;Indian/Reunion&quot;">Indian/Reunion</option><option value="&quot;Iran&quot;">Iran</option><option value="&quot;Israel&quot;">Israel</option><option value="&quot;Jamaica&quot;">Jamaica</option><option value="&quot;Japan&quot;">Japan</option><option value="&quot;Kwajalein&quot;">Kwajalein</option><option value="&quot;Libya&quot;">Libya</option><option value="&quot;MET&quot;">MET</option><option value="&quot;MST&quot;">MST</option><option value="&quot;MST7MDT&quot;">MST7MDT</option><option value="&quot;Mexico/BajaNorte&quot;">Mexico/BajaNorte</option><option value="&quot;Mexico/BajaSur&quot;">Mexico/BajaSur</option><option value="&quot;Mexico/General&quot;">Mexico/General</option><option value="&quot;NZ&quot;">NZ</option><option value="&quot;NZ-CHAT&quot;">NZ-CHAT</option><option value="&quot;Navajo&quot;">Navajo</option><option value="&quot;PRC&quot;">PRC</option><option value="&quot;PST8PDT&quot;">PST8PDT</option><option value="&quot;Pacific/Apia&quot;">Pacific/Apia</option><option value="&quot;Pacific/Auckland&quot;">Pacific/Auckland</option><option value="&quot;Pacific/Bougainville&quot;">Pacific/Bougainville</option><option value="&quot;Pacific/Chatham&quot;">Pacific/Chatham</option><option value="&quot;Pacific/Chuuk&quot;">Pacific/Chuuk</option><option value="&quot;Pacific/Easter&quot;">Pacific/Easter</option><option value="&quot;Pacific/Efate&quot;">Pacific/Efate</option><option value="&quot;Pacific/Enderbury&quot;">Pacific/Enderbury</option><option value="&quot;Pacific/Fakaofo&quot;">Pacific/Fakaofo</option><option value="&quot;Pacific/Fiji&quot;">Pacific/Fiji</option><option value="&quot;Pacific/Funafuti&quot;">Pacific/Funafuti</option><option value="&quot;Pacific/Galapagos&quot;">Pacific/Galapagos</option><option value="&quot;Pacific/Gambier&quot;">Pacific/Gambier</option><option value="&quot;Pacific/Guadalcanal&quot;">Pacific/Guadalcanal</option><option value="&quot;Pacific/Guam&quot;">Pacific/Guam</option><option value="&quot;Pacific/Honolulu&quot;">Pacific/Honolulu</option><option value="&quot;Pacific/Johnston&quot;">Pacific/Johnston</option><option value="&quot;Pacific/Kiritimati&quot;">Pacific/Kiritimati</option><option value="&quot;Pacific/Kosrae&quot;">Pacific/Kosrae</option><option value="&quot;Pacific/Kwajalein&quot;">Pacific/Kwajalein</option><option value="&quot;Pacific/Majuro&quot;">Pacific/Majuro</option><option value="&quot;Pacific/Marquesas&quot;">Pacific/Marquesas</option><option value="&quot;Pacific/Midway&quot;">Pacific/Midway</option><option value="&quot;Pacific/Nauru&quot;">Pacific/Nauru</option><option value="&quot;Pacific/Niue&quot;">Pacific/Niue</option><option value="&quot;Pacific/Norfolk&quot;">Pacific/Norfolk</option><option value="&quot;Pacific/Noumea&quot;">Pacific/Noumea</option><option value="&quot;Pacific/Pago_Pago&quot;">Pacific/Pago_Pago</option><option value="&quot;Pacific/Palau&quot;">Pacific/Palau</option><option value="&quot;Pacific/Pitcairn&quot;">Pacific/Pitcairn</option><option value="&quot;Pacific/Pohnpei&quot;">Pacific/Pohnpei</option><option value="&quot;Pacific/Ponape&quot;">Pacific/Ponape</option><option value="&quot;Pacific/Port_Moresby&quot;">Pacific/Port_Moresby</option><option value="&quot;Pacific/Rarotonga&quot;">Pacific/Rarotonga</option><option value="&quot;Pacific/Saipan&quot;">Pacific/Saipan</option><option value="&quot;Pacific/Samoa&quot;">Pacific/Samoa</option><option value="&quot;Pacific/Tahiti&quot;">Pacific/Tahiti</option><option value="&quot;Pacific/Tarawa&quot;">Pacific/Tarawa</option><option value="&quot;Pacific/Tongatapu&quot;">Pacific/Tongatapu</option><option value="&quot;Pacific/Truk&quot;">Pacific/Truk</option><option value="&quot;Pacific/Wake&quot;">Pacific/Wake</option><option value="&quot;Pacific/Wallis&quot;">Pacific/Wallis</option><option value="&quot;Pacific/Yap&quot;">Pacific/Yap</option><option value="&quot;Poland&quot;">Poland</option><option value="&quot;Portugal&quot;">Portugal</option><option value="&quot;ROC&quot;">ROC</option><option value="&quot;ROK&quot;">ROK</option><option value="&quot;Singapore&quot;">Singapore</option><option value="&quot;Turkey&quot;">Turkey</option><option value="&quot;UCT&quot;">UCT</option><option value="&quot;US/Alaska&quot;">US/Alaska</option><option value="&quot;US/Aleutian&quot;">US/Aleutian</option><option value="&quot;US/Arizona&quot;">US/Arizona</option><option value="&quot;US/Central&quot;">US/Central</option><option value="&quot;US/East-Indiana&quot;">US/East-Indiana</option><option value="&quot;US/Eastern&quot;">US/Eastern</option><option value="&quot;US/Hawaii&quot;">US/Hawaii</option><option value="&quot;US/Indiana-Starke&quot;">US/Indiana-Starke</option><option value="&quot;US/Michigan&quot;">US/Michigan</option><option value="&quot;US/Mountain&quot;">US/Mountain</option><option value="&quot;US/Pacific&quot;">US/Pacific</option><option value="&quot;US/Pacific-New&quot;">US/Pacific-New</option><option value="&quot;US/Samoa&quot;">US/Samoa</option><option value="&quot;UTC&quot;">UTC</option><option value="&quot;Universal&quot;">Universal</option><option value="&quot;W-SU&quot;">W-SU</option><option value="&quot;WET&quot;">WET</option><option value="&quot;Zulu&quot;">Zulu</option><option value="&quot;Etc/GMT&quot;">Etc/GMT</option><option value="&quot;Etc/GMT+0&quot;">Etc/GMT+0</option><option value="&quot;Etc/GMT+1&quot;">Etc/GMT+1</option><option value="&quot;Etc/GMT+10&quot;">Etc/GMT+10</option><option value="&quot;Etc/GMT+11&quot;">Etc/GMT+11</option><option value="&quot;Etc/GMT+12&quot;">Etc/GMT+12</option><option value="&quot;Etc/GMT+2&quot;">Etc/GMT+2</option><option value="&quot;Etc/GMT+3&quot;">Etc/GMT+3</option><option value="&quot;Etc/GMT+4&quot;">Etc/GMT+4</option><option value="&quot;Etc/GMT+5&quot;">Etc/GMT+5</option><option value="&quot;Etc/GMT+6&quot;">Etc/GMT+6</option><option value="&quot;Etc/GMT+7&quot;">Etc/GMT+7</option><option value="&quot;Etc/GMT+8&quot;">Etc/GMT+8</option><option value="&quot;Etc/GMT+9&quot;">Etc/GMT+9</option><option value="&quot;Etc/GMT-0&quot;">Etc/GMT-0</option><option value="&quot;Etc/GMT-1&quot;">Etc/GMT-1</option><option value="&quot;Etc/GMT-10&quot;">Etc/GMT-10</option><option value="&quot;Etc/GMT-11&quot;">Etc/GMT-11</option><option value="&quot;Etc/GMT-12&quot;">Etc/GMT-12</option><option value="&quot;Etc/GMT-13&quot;">Etc/GMT-13</option><option value="&quot;Etc/GMT-14&quot;">Etc/GMT-14</option><option value="&quot;Etc/GMT-2&quot;">Etc/GMT-2</option><option value="&quot;Etc/GMT-3&quot;">Etc/GMT-3</option><option value="&quot;Etc/GMT-4&quot;">Etc/GMT-4</option><option value="&quot;Etc/GMT-5&quot;">Etc/GMT-5</option><option value="&quot;Etc/GMT-6&quot;">Etc/GMT-6</option><option value="&quot;Etc/GMT-7&quot;">Etc/GMT-7</option><option value="&quot;Etc/GMT-8&quot;">Etc/GMT-8</option><option value="&quot;Etc/GMT-9&quot;">Etc/GMT-9</option><option value="&quot;Etc/GMT0&quot;">Etc/GMT0</option><option value="&quot;Etc/Greenwich&quot;">Etc/Greenwich</option><option value="&quot;Etc/UCT&quot;">Etc/UCT</option><option value="&quot;Etc/UTC&quot;">Etc/UTC</option><option value="&quot;Etc/Universal&quot;">Etc/Universal</option><option value="&quot;Etc/Zulu&quot;">Etc/Zulu</option></select></td></tr></tbody></table><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_791">Public Info</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_input" name="public_info" placeholder="" type="text" id="o_field_input_791"></td></tr></tbody></table></div><textarea class="o_field_text o_field_widget o_input" style="overflow-y: hidden; height: 50px; resize: none;" name="notes" placeholder="Other Information ..." type="text" id="o_field_input_792"></textarea><textarea disabled="disabled" style="position: absolute; opacity: 0; height: 10px; border-top-width: 0px; border-bottom-width: 0px; padding: 0px; top: -10000px; left: -10000px; width: 1076px;"></textarea></div><div class="tab-pane" id="notebook_page_859"><div class="o_field_boolean o_field_widget custom-control custom-checkbox o_invisible_modifier o_readonly_modifier" name="has_badges"><input type="checkbox" id="checkbox-860" class="custom-control-input" disabled="disabled"><label for="o_field_input_795" class="custom-control-label">​</label></div><button type="button" name="270" class="btn btn-secondary"><span>Grant a Badge</span></button> to reward this employee for a good action
+                    <div class="o_field_nocontent" attrs="{'invisible': [('has_badges', '=', True)]}"><p>
+                            Grant this employee his first badge
+                        </p><p class="oe_grey">
+                            Badges are rewards of good work. Give them to people you believe deserve it.
+                        </p></div><div class="o_field_many2many o_field_widget o_field_x2many o_field_x2many_kanban o_readonly_modifier" name="badge_ids" id="o_field_input_796" data-original-title="" title=""><div class="o_x2m_control_panel">
+        <nav aria-label="Control panel toolbar" class="o_cp_buttons" role="toolbar"></nav>
+        <nav aria-label="Pager" class="o_cp_pager" role="toolbar"><div class="o_hidden">
+    <span class="o_pager_counter">
+        <span class="o_pager_value"></span> / <span class="o_pager_limit"></span>
+    </span>
+    <span aria-atomic="true" class="btn-group">
+        
+        
+        <button aria-label="Previous" class="fa fa-chevron-left btn btn-secondary o_pager_previous" tabindex="-1" title="Previous" type="button"></button>
+        <button aria-label="Next" class="fa fa-chevron-right btn btn-secondary o_pager_next" tabindex="-1" title="Next" type="button"></button>
+    </span>
+</div></nav>
+    </div><div class="o_kanban_view oe_background_grey o_kanban_ungrouped"><div class="o_kanban_record o_kanban_ghost"></div><div class="o_kanban_record o_kanban_ghost"></div><div class="o_kanban_record o_kanban_ghost"></div><div class="o_kanban_record o_kanban_ghost"></div><div class="o_kanban_record o_kanban_ghost"></div><div class="o_kanban_record o_kanban_ghost"></div></div></div></div><div class="tab-pane" id="notebook_page_861"><div class="o_group"><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">Citizenship &amp; Other Information</div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_798">Nationality (Country)</label></td><td style="width: 100%;"><div aria-atomic="true" class="o_field_widget o_field_many2one" name="country_id">
+        <div class="o_input_dropdown">
+            <input class="o_input ui-autocomplete-input" type="text" autocomplete="off" id="o_field_input_798">
+            <a class="o_dropdown_button" draggable="false" role="button"></a>
+        </div>
+        
+    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_799">Identification No</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_input" name="identification_id" placeholder="" type="text" id="o_field_input_799"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_800">Passport No</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_input" name="passport_id" placeholder="" type="text" id="o_field_input_800"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_801" data-original-title="" title="">Bank Account Number</label></td><td style="width: 100%;"><div aria-atomic="true" class="o_field_widget o_field_many2one" name="bank_account_id">
+        <div class="o_input_dropdown">
+            <input class="o_input ui-autocomplete-input" type="text" autocomplete="off" id="o_field_input_801">
+            <a class="o_dropdown_button" draggable="false" role="button"></a>
+        </div>
+        <button aria-label="External link" class="fa fa-external-link btn btn-secondary o_external_button" draggable="false" tabindex="-1" title="External link" type="button" style="display: none;"></button>
+    </div></td></tr></tbody></table><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">Contact Information</div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_802" data-original-title="" title="">Private Address</label></td><td style="width: 100%;"><div aria-atomic="true" class="o_field_widget o_field_many2one" name="address_home_id">
+        <div class="o_input_dropdown">
+            <input class="o_input ui-autocomplete-input" type="text" autocomplete="off" id="o_field_input_802">
+            <a class="o_dropdown_button" draggable="false" role="button"></a>
+        </div>
+        <button aria-label="External link" class="fa fa-external-link btn btn-secondary o_external_button" draggable="false" tabindex="-1" title="External link" type="button" style="display: none;"></button>
+    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier o_readonly_modifier" for="o_field_input_804">The employee adress has a company linked</label></td><td style="width: 100%;"><div class="o_field_boolean o_field_widget custom-control custom-checkbox o_invisible_modifier o_readonly_modifier" name="is_address_home_a_company"><input type="checkbox" id="checkbox-862" class="custom-control-input" disabled="disabled"><label for="o_field_input_804" class="custom-control-label">​</label></div></td></tr><tr><td style="width: 50%;"><div class="text-warning o_invisible_modifier" attrs="{'invisible': [('is_address_home_a_company','=', False)]}">
+                                            Use here the home address of the employee.
+                                            This private address is used in the expense report reimbursement document.
+                                            It should be different from the work address.
+                                        </div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_805">Emergency Contact</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_input" name="emergency_contact" placeholder="" type="text" id="o_field_input_805"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_806">Emergency Phone</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_input" name="emergency_phone" placeholder="" type="text" id="o_field_input_806"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_807">Km home-work</label></td><td style="width: 100%;"><input class="o_field_integer o_field_number o_field_widget o_input" name="km_home_work" placeholder="" type="text" id="o_field_input_807" value="0"></td></tr></tbody></table><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">Status</div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_808">Gender</label></td><td style="width: 100%;"><select class="o_input o_field_widget" name="gender" id="o_field_input_808"><option value="false"></option><option value="&quot;male&quot;" selected="selected">Male</option><option value="&quot;female&quot;">Female</option><option value="&quot;other&quot;">Other</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_810" data-original-title="" title="">Disabled</label></td><td style="width: 100%;"><div class="o_field_boolean o_field_widget custom-control custom-checkbox" name="disabled"><input type="checkbox" id="o_field_input_810" class="custom-control-input"><label for="o_field_input_810" class="custom-control-label">​</label></div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_811">Marital Status</label></td><td style="width: 100%;"><select class="o_input o_field_widget" name="marital" id="o_field_input_811"><option value="false"></option><option value="&quot;single&quot;" selected="selected">Single</option><option value="&quot;married&quot;">Married</option><option value="&quot;cohabitant&quot;">Legal Cohabitant</option><option value="&quot;widower&quot;">Widower</option><option value="&quot;divorced&quot;">Divorced</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_812" data-original-title="" title="">Tax status for spouse</label></td><td style="width: 100%;"><select class="o_input o_field_widget o_invisible_modifier" name="spouse_fiscal_status" id="o_field_input_812"><option value="false" selected="selected"></option><option value="&quot;without income&quot;">Without Income</option><option value="&quot;with income&quot;">With Income</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_813" data-original-title="" title="">Spouse Net Revenue</label></td><td style="width: 100%;"><input class="o_field_float o_field_number o_field_widget o_input o_invisible_modifier" name="spouse_net_revenue" placeholder="" type="text" id="o_field_input_813" value="0.00"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_814" data-original-title="" title="">Spouse Other Net Revenue</label></td><td style="width: 100%;"><input class="o_field_float o_field_number o_field_widget o_input o_invisible_modifier" name="spouse_other_net_revenue" placeholder="" type="text" id="o_field_input_814" value="0.00"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_816" data-original-title="" title="">Disabled Spouse</label></td><td style="width: 100%;"><div class="o_field_boolean o_field_widget custom-control custom-checkbox o_invisible_modifier" name="disabled_spouse_bool"><input type="checkbox" id="o_field_input_816" class="custom-control-input"><label for="o_field_input_816" class="custom-control-label">​</label></div></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_817">Spouse Complete Name</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_input o_invisible_modifier" name="spouse_complete_name" placeholder="" type="text" id="o_field_input_817"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_818">Spouse Birthdate</label></td><td style="width: 100%;"><div aria-atomic="true" class="o_datepicker o_field_date o_field_widget o_invisible_modifier" data-target-input="nearest" id="datepicker865" name="spouse_birthdate">
+        <input class="o_datepicker_input o_input datetimepicker-input" name="spouse_birthdate" data-target="#datepicker865" type="text" placeholder="" id="o_field_input_818">
+        <span class="o_datepicker_button"></span>
+    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_819">Number of Children</label></td><td style="width: 100%;"><input class="o_field_integer o_field_number o_field_widget o_input" name="children" placeholder="" type="text" id="o_field_input_819" value="0"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_821" data-original-title="" title="">Disabled Children</label></td><td style="width: 100%;"><div class="o_field_boolean o_field_widget custom-control custom-checkbox" name="disabled_children_bool"><input type="checkbox" id="o_field_input_821" class="custom-control-input"><label for="o_field_input_821" class="custom-control-label">​</label></div></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_822" data-original-title="" title="">Number of disabled children</label></td><td style="width: 100%;"><input class="o_field_integer o_field_number o_field_widget o_input o_invisible_modifier" name="disabled_children_number" placeholder="" type="text" id="o_field_input_822" value="0"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier o_readonly_modifier" for="o_field_input_823">Considered number of dependent children</label></td><td style="width: 100%;"><span class="o_field_integer o_field_number o_field_widget o_invisible_modifier o_readonly_modifier" name="dependent_children">0</span></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_825" data-original-title="" title="">Other Dependent People</label></td><td style="width: 100%;"><div class="o_field_boolean o_field_widget custom-control custom-checkbox" name="other_dependent_people"><input type="checkbox" id="o_field_input_825" class="custom-control-input"><label for="o_field_input_825" class="custom-control-label">​</label></div></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_826" data-original-title="" title=""># seniors (&gt;=65)</label></td><td style="width: 100%;"><input class="o_field_integer o_field_number o_field_widget o_input o_invisible_modifier" name="other_senior_dependent" placeholder="" type="text" id="o_field_input_826" value="0"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_827"># disabled seniors (&gt;=65)</label></td><td style="width: 100%;"><input class="o_field_integer o_field_number o_field_widget o_input o_invisible_modifier" name="other_disabled_senior_dependent" placeholder="" type="text" id="o_field_input_827" value="0"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_828" data-original-title="" title=""># people (&lt;65)</label></td><td style="width: 100%;"><input class="o_field_integer o_field_number o_field_widget o_input o_invisible_modifier" name="other_juniors_dependent" placeholder="" type="text" id="o_field_input_828" value="0"></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_829"># disabled people (&lt;65)</label></td><td style="width: 100%;"><input class="o_field_integer o_field_number o_field_widget o_input o_invisible_modifier" name="other_disabled_juniors_dependent" placeholder="" type="text" id="o_field_input_829" value="0"></td></tr></tbody></table><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">Birth</div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_830">Date of Birth</label></td><td style="width: 100%;"><div aria-atomic="true" class="o_datepicker o_field_date o_field_widget" data-target-input="nearest" id="datepicker868" name="birthday">
+        <input class="o_datepicker_input o_input datetimepicker-input" name="birthday" data-target="#datepicker868" type="text" placeholder="" id="o_field_input_830">
+        <span class="o_datepicker_button"></span>
+    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_831">Place of Birth</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_input" name="place_of_birth" placeholder="" type="text" id="o_field_input_831"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_832">Country of Birth</label></td><td style="width: 100%;"><div aria-atomic="true" class="o_field_widget o_field_many2one" name="country_of_birth">
+        <div class="o_input_dropdown">
+            <input class="o_input ui-autocomplete-input" type="text" autocomplete="off" id="o_field_input_832">
+            <a class="o_dropdown_button" draggable="false" role="button"></a>
+        </div>
+        <button aria-label="External link" class="fa fa-external-link btn btn-secondary o_external_button" draggable="false" tabindex="-1" title="External link" type="button" style="display: none;"></button>
+    </div></td></tr></tbody></table><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">Work Permit</div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_833">Visa No</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_input" name="visa_no" placeholder="" type="text" id="o_field_input_833"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_834">Work Permit No</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_input" name="permit_no" placeholder="" type="text" id="o_field_input_834"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_835">Visa Expire Date</label></td><td style="width: 100%;"><div aria-atomic="true" class="o_datepicker o_field_date o_field_widget" data-target-input="nearest" id="datepicker869" name="visa_expire">
+        <input class="o_datepicker_input o_input datetimepicker-input" name="visa_expire" data-target="#datepicker869" type="text" placeholder="" id="o_field_input_835">
+        <span class="o_datepicker_button"></span>
+    </div></td></tr></tbody></table><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">Education</div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_836">Certificate Level</label></td><td style="width: 100%;"><select class="o_input o_field_widget" name="certificate" id="o_field_input_836"><option value="false"></option><option value="&quot;bachelor&quot;">Bachelor</option><option value="&quot;master&quot;" selected="selected">Master</option><option value="&quot;other&quot;">Other</option></select></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_837">Field of Study</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_input" name="study_field" placeholder="" type="text" id="o_field_input_837"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_838">School</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_input" name="study_school" placeholder="" type="text" id="o_field_input_838"></td></tr></tbody></table></div><table class="o_group o_inner_group"><tbody><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_839">Employee Documents</label></td><td style="width: 100%;"><input class="o_field_url o_field_widget o_input" name="google_drive_link" placeholder="" type="text" id="o_field_input_839"></td></tr></tbody></table><table class="o_group o_inner_group"><tbody><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_840">Additional Note</label></td><td style="width: 100%;"><textarea class="o_field_text o_field_widget o_input" style="overflow-y: hidden; height: 50px; resize: none;" name="additional_note" placeholder="" type="text" id="o_field_input_840"></textarea><textarea disabled="disabled" style="position: absolute; opacity: 0; height: 10px; border-top-width: 0px; border-bottom-width: 0px; padding: 0px; top: -10000px; left: -10000px; width: 104px;"></textarea></td></tr></tbody></table></div><div class="tab-pane" id="notebook_page_870"><div class="o_group"><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">Expenses</div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_842" data-original-title="" title="">Expense Responsible</label></td><td style="width: 100%;"><div aria-atomic="true" class="o_field_widget o_field_many2one" name="expense_manager_id">
+        <div class="o_input_dropdown">
+            <input class="o_input ui-autocomplete-input" type="text" autocomplete="off" id="o_field_input_842">
+            <a class="o_dropdown_button" draggable="false" role="button"></a>
+        </div>
+        <button aria-label="External link" class="fa fa-external-link btn btn-secondary o_external_button" draggable="false" tabindex="-1" title="External link" type="button" style="display: none;"></button>
+    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_843" data-original-title="" title="">Timesheets Validation Date</label></td><td style="width: 100%;"><div aria-atomic="true" class="o_datepicker o_field_date o_field_widget o_invisible_modifier" data-target-input="nearest" id="datepicker871" name="timesheet_validated">
+        <input class="o_datepicker_input o_input datetimepicker-input" name="timesheet_validated" data-target="#datepicker871" type="text" placeholder="" id="o_field_input_843">
+        <span class="o_datepicker_button"></span>
+    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_844" data-original-title="" title="">Timesheet Responsible</label></td><td style="width: 100%;"><div aria-atomic="true" class="o_field_widget o_field_many2one" name="timesheet_manager_id">
+        <div class="o_input_dropdown">
+            <input class="o_input ui-autocomplete-input" type="text" autocomplete="off" id="o_field_input_844">
+            <a class="o_dropdown_button" draggable="false" role="button"></a>
+        </div>
+        <button aria-label="External link" class="fa fa-external-link btn btn-secondary o_external_button" draggable="false" tabindex="-1" title="External link" type="button" style="display: none;"></button>
+    </div></td></tr></tbody></table><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">Timesheets</div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_845">Timesheet Cost</label></td><td style="width: 100%;"><div><div class="o_field_monetary o_field_number o_input o_field_widget oe_inline" name="timesheet_cost"><span>$</span><input class="o_input" placeholder="" type="text" id="o_field_input_845" value="0.00"></div> per hour
+                        <a class="o_form_uri o_field_widget o_invisible_modifier o_readonly_modifier" href="#id=2&amp;model=res.currency" name="currency_id" id="o_field_input_846">USD</a></div></td></tr></tbody></table><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">Status</div></td></tr><tr><td class="o_td_label"><label class="o_form_label o_invisible_modifier" for="o_field_input_847">Company</label></td><td style="width: 100%;"><div aria-atomic="true" class="o_field_widget o_field_many2one o_with_button o_invisible_modifier" name="company_id">
+        <div class="o_input_dropdown">
+            <input class="o_input ui-autocomplete-input" type="text" autocomplete="off" id="o_field_input_847" value="Demo Company">
+            <a class="o_dropdown_button" draggable="false" role="button"></a>
+        </div>
+        <button aria-label="External link" class="fa fa-external-link btn btn-secondary o_external_button" draggable="false" tabindex="-1" title="External link" type="button" style="display: inline-block;"></button>
+    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_848" data-original-title="" title="">Website</label></td><td style="width: 100%;"><div aria-atomic="true" class="o_field_widget o_field_many2one" name="website_id">
+        <div class="o_input_dropdown">
+            <input class="o_input ui-autocomplete-input" type="text" autocomplete="off" id="o_field_input_848">
+            <a class="o_dropdown_button" draggable="false" role="button"></a>
+        </div>
+        <button aria-label="External link" class="fa fa-external-link btn btn-secondary o_external_button" draggable="false" tabindex="-1" title="External link" type="button" style="display: none;"></button>
+    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_849" data-original-title="" title="">Related User</label></td><td style="width: 100%;"><div aria-atomic="true" class="o_field_widget o_field_many2one" name="user_id">
+        <div class="o_input_dropdown">
+            <input class="o_input ui-autocomplete-input" type="text" autocomplete="off" id="o_field_input_849">
+            <a class="o_dropdown_button" draggable="false" role="button"></a>
+        </div>
+        <button aria-label="External link" class="fa fa-external-link btn btn-secondary o_external_button" draggable="false" tabindex="-1" title="External link" type="button" style="display: none;"></button>
+    </div></td></tr></tbody></table><table class="o_group o_inner_group o_invisible_modifier o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">Leaves</div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_850" data-original-title="" title="">Remaining Legal Leaves</label></td><td style="width: 100%;"><div><span class="o_field_float o_field_number o_field_widget o_readonly_modifier oe_inline" name="remaining_leaves">0.00</span> days
+                    </div></td></tr></tbody></table><table class="o_group o_inner_group o_group_col_6"><tbody><tr><td colspan="2" style="width: 100%;"><div class="o_horizontal_separator">Current Contract</div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_851">Medical Exam</label></td><td style="width: 100%;"><div aria-atomic="true" class="o_datepicker o_field_date o_field_widget" data-target-input="nearest" id="datepicker872" name="medic_exam">
+        <input class="o_datepicker_input o_input datetimepicker-input" name="medic_exam" data-target="#datepicker872" type="text" placeholder="" id="o_field_input_851">
+        <span class="o_datepicker_button"></span>
+    </div></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_852">Company Vehicle</label></td><td style="width: 100%;"><input class="o_field_char o_field_widget o_input" name="vehicle" placeholder="" type="text" id="o_field_input_852"></td></tr><tr><td class="o_td_label"><label class="o_form_label" for="o_field_input_854" data-original-title="" title="">Nonresident</label></td><td style="width: 100%;"><div class="o_field_boolean o_field_widget custom-control custom-checkbox" name="resident_bool"><input type="checkbox" id="o_field_input_854" class="custom-control-input"><label for="o_field_input_854" class="custom-control-label">​</label></div></td></tr></tbody></table></div></div></div></div></div></div></div></div><aside class="o_chatter oe_chatter" style="height: auto;">
+            <div class="o_chatter_topbar">
+        <button class="btn btn-link o_chatter_button_new_message" title="Send a message" type="button">
+            Send message
+        </button>
+        <button class="btn btn-link o_chatter_button_log_note" title="Log a note. Followers will not be notified.">
+            Log note
+        </button>
+        <button class="btn btn-link o_chatter_button_schedule_activity" title="Log or schedule an activity">
+            <i aria-label="Dates" class="fa fa-clock-o" role="img" title="Dates"></i> Schedule activity
+        </button>
+
+    
+                <div class="o_topbar_right_area">
+        <div class="o_followers o_field_widget" name="message_follower_ids">
+            <div class="o_followers_title_box">
+                <button aria-expanded="false" class="btn btn-link dropdown-toggle" data-toggle="dropdown" title="One follower">
+                    <i aria-label="Dropdown menu - Followers" class="fa fa-user" role="img"></i>
+                    <span class="o_followers_count">1</span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right o_followers_list" role="menu"><a class="dropdown-item o_add_follower" href="#" role="menuitem">Add Followers</a>
+            <a class="dropdown-item o_add_follower_channel" href="#" role="menuitem">Add Channels</a>
+            <div class="dropdown-divider" role="separator"></div><div class="o_partner" role="menuitem">
+            <a class="dropdown-item o_mail_redirect" href="#" data-oe-id="2" data-oe-model="res.partner" title="OdooBot">OdooBot</a>
+            <img alt="Avatar" src="resources/images/image_small.png">
+            <i aria-label="Edit subscription" class="fa fa-pencil o_edit_subtype d-none" role="img" data-follower-id="79" data-oe-id="2" data-oe-model="res.partner" title="Edit subscription"></i>
+            <i aria-label="Remove this follower" class="fa fa-remove o_remove_follower" role="img" title="Remove this follower"></i>
+        </div></div>
+            </div>
+            <div class="o_followers_actions" style="display: block;">
+                <div class="btn-group o_subtypes_list">
+                    <button class="btn btn-link o_followers_follow_button o_followers_notfollow">
+                        <span class="o_follow">Follow</span>
+                        <span class="fa fa-times o_followers_unfollow"></span>
+                        <span class="o_followers_unfollow"> Unfollow</span>
+                        <span class="fa fa-check o_followers_following"></span>
+                        <span class="o_followers_following"> Following</span>
+                    </button><button aria-expanded="false" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                        <span aria-label="Alarm menu" class="fa fa-bell" role="img" title="Alarm menu"></span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" role="menu"></div>
+                </div>
+            </div>
+        </div><button class="btn btn-link o_chatter_button_attachment" title="View all the attachments of the current record">
+            <span>
+                <i class="fa fa-paperclip"></i>
+                <span class="o_chatter_attachment_button_count">
+                    0
+                </span>
+            </span>
+        </button>
+    </div>
+            </div>
+        <div class="o_mail_activity o_field_widget" name="activity_ids"></div><div class="o_mail_thread">
+        
+            
+        
+        
+        <div class="o_mail_thread_content">
+            
+            
+            
+            
+        
+        
+            <div class="o_thread_date_separator">
+                <span class="o_thread_date">
+                    July 5, 2019
+                </span>
+                
+            </div>
+
+            
+        <div class="o_thread_message  o_mail_not_discussion" data-message-id="170">
+            <div class="o_thread_message_sidebar">
+                
+                    <img alt="" data-oe-model="res.partner" data-oe-id="2" src="resources/images/image_small.png" class="o_thread_message_avatar rounded-circle o_mail_redirect">
+                
+                
+                
+            </div>
+            <div class="o_thread_message_core">
+                <p class="o_mail_info text-muted">
+                    
+                    
+
+                    <strong data-oe-model="res.partner" data-oe-id="2" class="o_thread_author o_mail_redirect">
+                        OdooBot
+                    </strong>
+
+                    - <small class="o_mail_timestamp" title="07/05/2019 17:18:18">4 days ago</small>
+                    
+                    
+                    
+                    <span class="o_thread_icons">
+                        <i aria-label="Mark as Todo" role="img" class="fa fa-lg o_thread_icon o_thread_message_star fa-star-o" data-message-id="170" title="Mark as Todo"></i>
+                       
+                        
+
+                        
+                    </span>
+                </p>
+                <div class="o_thread_message_content">
+                    
+                    
+                        
+                        
+        <ul class="o_mail_thread_message_tracking">
+            
+                <li>
+                    Active:
+                    
+                    <span>
+                        true
+                    </span>
+                </li>
+            
+        </ul>
+    
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+    
+        
+            
+
+            
+        <div class="o_thread_message  o_mail_not_discussion" data-message-id="169">
+            <div class="o_thread_message_sidebar">
+                
+                    <img alt="" data-oe-model="res.partner" data-oe-id="2" src="resources/images/image_small.png" class="o_thread_message_avatar rounded-circle o_mail_redirect">
+                
+                
+                
+            </div>
+            <div class="o_thread_message_core">
+                <p class="o_mail_info text-muted">
+                    
+                    
+
+                    <strong data-oe-model="res.partner" data-oe-id="2" class="o_thread_author o_mail_redirect">
+                        OdooBot
+                    </strong>
+
+                    - <small class="o_mail_timestamp" title="07/05/2019 17:18:18">4 days ago</small>
+                    
+                    
+                    
+                    <span class="o_thread_icons">
+                        <i aria-label="Mark as Todo" role="img" class="fa fa-lg o_thread_icon o_thread_message_star fa-star-o" data-message-id="169" title="Mark as Todo"></i>
+                       
+                        
+
+                        
+                    </span>
+                </p>
+                <div class="o_thread_message_content">
+                    <p>Employee created</p>
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+    
+        
+    
+            
+        </div>
+    
+    
+        
+    </div></aside></div></div></div><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-80" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-81" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-82" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-83" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-84" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-85" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-86" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-87" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-88" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-89" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-90" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-91" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-92" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-93" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-94" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-95" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span></body></html>
